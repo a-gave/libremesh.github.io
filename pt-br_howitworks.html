@@ -1,0 +1,469 @@
+<!doctype html>
+
+<!--[if IE 9]>
+<html class="lt-ie10" lang="pt-br"> <![endif]-->
+<html lang="pt-br" class="no-js" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Como funciona</title>
+
+
+    <meta name="description"
+          content="The LibreMesh project, a set of tools for making the free networks possible"/>
+	
+    <link rel="stylesheet" href="/css/foundation.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/coderay.css"/>
+    <link rel="stylesheet" href="/css/asciidoctor.css"/>
+    <link rel="stylesheet" href="/css/lime.css"/>
+    <script src="/js/vendor/modernizr.js"></script>
+    <script src="/js/toc.js"></script>
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">
+                    <img src="/logo/logo_nano.png"></img>
+                    <span class="top-bar-title">LibreMesh</span>
+                </a>
+            </h1>
+        </li>
+	<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+    </ul>
+    
+<!-- lang --> 
+<ul class="lng">
+
+
+
+
+
+  <li>
+    <a href="/howitworks.html" class="en">en</a>
+  </li>
+
+  <li>
+    <a href="/es_howitworks.html" class="es">es</a>
+  </li>
+
+  <li>
+    <a href="/pt-br_howitworks.html" class="pt-br">pt-br</a>
+  </li>
+
+    </ul>
+<!-- fine lang-->
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/">Home</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/news.html">News</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/communication.html">Communication</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/getit.html">Get it!</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li  class="active"><a href="/pt-br_howitworks.html">Como funciona</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/development.html">Development</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/docs/">Documentation</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/about.html">About</a></li>
+
+
+        </ul>
+    </section>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+    <!-- Docs Sidebar -->
+
+    
+
+    <!-- End Docs Sidebar -->
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sectionbody ">
+            
+            <div class="paragraph text-right">
+                <p>
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/edit/master/pt-br_howitworks.txt"></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="sect1">
+<h2 id="objetivos_a_alcançar">Objetivos a alcançar</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Escalabilidade</p>
+</li>
+<li>
+<p>Segmentação de redes</p>
+</li>
+<li>
+<p>Roaming de camada 2 dentro de certas áreas</p>
+</li>
+<li>
+<p>Seleção inteligente de gateway com redundância e possibilidade de escolha do usuário</p>
+</li>
+<li>
+<p>Compatibilidade com a maior parte dos cenários existentes</p>
+</li>
+<li>
+<p>Um firmware único para toda a rede (roteadores de base, backbone, empresas instalações rápidas, etc)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="o_básico">O Básico</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A infraestrutura de rede do LibreMesh é baseada em 2 camadas:</p>
+</div>
+<div class="sect2">
+<h3 id="camada_2_nuvem">Camada 2 / nuvem</h3>
+<div class="paragraph">
+<p>A camada 2 nuvem usa ao protocolo dinâmico de roteamento BATMAN-ADV</p>
+</div>
+<div class="imageblock left">
+<div class="content">
+<img src="img/bat-adv.png" alt="batmanadv" width="100">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>advanced é um protocolo de roteamento mesh que é executado no kernel space. Mesmo se a topologia da rede é feita de múltiplos nós e múltiplos hops (saltos), ele a abstrai para um único domínio de
+colisão na camada 2. Então, da perspectiva do usuário, toda   a   mesh   vai   parecer   uma   única   LAN.   Essa   arquitetura   é   muito   interessante   para fins de roaming, então conexões TCP e UDP não se perdem quando você troca de Access Point (AP).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="camada_3_rede">Camada 3 / rede</h3>
+<div class="paragraph">
+<p>Toda rede de camada 3 usa por padrão o protocolo de roteamento BMX</p>
+</div>
+<div class="imageblock left">
+<div class="content">
+<img src="img/bmx7.png" alt="bmx7" width="100">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>BMX6   (ou   a   nova   versão   BMX7)   é   um   protocolo   de   roteamento
+dinâmico IPV6 que oferece funções muito avançadas e baixo overhead
+de   rede   (graças   a   estratégia   de   vetor   de   distância   e   uma   série   de
+otimizações). Versão 7 tem, adicionalmente, extensões de roteamento de segurança.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="misturando_camadas">Misturando camadas</h3>
+<div class="paragraph">
+<p>Por padrão, todos os nodes executam ambos os protocolos de roteamento (BMX e BAT-ADV), mas em uma VLAN (1) diferente. Então o roteamento é isolado pela camada MAC.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A VLAN BMX é sempre a mesma, então todos os nós conectados à camada de link vão procurar uns aos outros.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A VLAN BATADV depende do identificador cloud que é calculado (por padrão) usando o SSID do AP (Access point).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Portanto a rede BMX vai ser única para toda a MESH, mas a rede BAT-ADV pode ficar dividida em muitas nuvens.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/network1.png" alt="network1">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Essa configuração permite isolar a camada 2/nuvem.</strong>   Por   exemplo   num   bairro,   um complexo empresarial ou numa rede de hotspots abertos você pode escolher isolar sua LAN do resto da rede. Porém ao mesmo tempo, você pode alcançar os outros nós usando a rede de roteamento da camada 3.</p>
+</div>
+<div class="paragraph">
+<p>Roaming vai ser disponível dentro da nuvem, então qualquer sessão TCP, video ou chamada SIP pode ser realizada enquanto se move. Por outro lado, graças a segmentação de camada 3,   os   problemas   comumente   encontrados   na   camada   2   de   uma   rede   em   bridge   (como tempestade de broadcast ou problemas com DHCP) não vão perturbar a operação correta da rede.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>E tudo isso automático, auto-mágico e transparente para o usuário final.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/network2.png" alt="network2">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="detalhes">Detalhes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Os WiFI Access Points da mesma cloud compartilham alguns parâmetros:
+* SSID, o nome de identificação do WiFi AP
+* Endereços IPv4 e IPv6 especiais para anycast.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>
+* Um  MAC address especial para anycast.
+* Um servidor DHCP/RA para prover IPs válidos para todos os clientes da cloud.</p>
+</div>
+<div class="paragraph">
+<p>Então um cliente conectado em um AP pode se mover pela mesh sem precisar renovar seu IP. Até a camada MAC vai ser sempre a mesma do seu ponto de vista.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/network3.png" alt="network3">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Os leases de DHCP (concessão) são compartilhados pela cloud para prevenir colisões
+usando A.L.F.R.E.D
+<a href="http://en.wiki.guifi.net/wiki/A.L.F.R.E.D.">A.L.F.R.E.D.</a></p>
+</div>
+<div class="paragraph">
+<p>Desde que os nós compartilhem um mesmo anycast MAC/IP, do ponto de vista do
+cliente é totalmente transparente. Portanto o gateway é sempre o mesmo ainda que o nó
+mesh que ele esteja anexado seja outro.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/network4.png" alt="network4">
+</div>
+</div>
+<div class="paragraph">
+<p>Quando um cliente quer sair da LAN (cloud) para conectar a internet ou outra rede, ele vai enviar
+um pacote para o anycast especial do gateway. Então o nó onde o cliente está fisicamente conectado
+vai tomar conta de todo o resto.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Uma regra de ebtables .<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> no AP/LAN previne que os pacotes de propagação de camada 2 na nuvem sejam enviados para o endereço anycast. Então o nó mesh onde o cliente está associado pega o pacote, mas os outros não.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/network5.png" alt="network5">
+</div>
+</div>
+<div class="paragraph">
+<p>O pacote é roteado através do BMX para o melhor gateway de internet. Pode ser o nó da mesma
+cloud ou de alguma outra cloud distante.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>O BMX   tem   uma   funcionalidade   de   <em>inteligência</em>   de   gateway   bem   poderoso   que
+automaticamente detecta o melhor nó de gateway de internet levando em consideração
+a largura de banda</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/network6.png" alt="network6">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No   caminho   de   volta   o   pacote   vai   chegar   no   mesmo   nó   da   cloud,   mas   não
+necessariamente no mesmo nó que partiu. Independente disso, o pacote será enviado corretamente para quem o originou. Isso acontece porque o BMX smart gateway usa conexões de túnel de mão única para garantir que o gateway selecionado seja utilizado.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. IPs compartilhados por vários dispositivos na rede
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. ebtables é como uma iptables mas para a camada 2/rede
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    
+    <aside class="large-3 columns">
+        <h4>Links</h4>
+<div class="panel">
+    <ul class="fa-ul">
+        <li><i class="fa-li fa fa-download" aria-hidden="true"></i><a href="https://downloads.libremesh.org/releases/2020.1/">Latest Release Firmware</a></li>
+        <li><i class="fa-li fa fa-linux" aria-hidden="true"></i><a href="development.html">Build Firmware Locally</a></li>
+        <li><i class="fa-li fa fa-code-fork" aria-hidden="true"></i><a href="https://github.com/libremesh/">Source Code</a></li>
+        <li><i class="fa-li fa fa-envelope" aria-hidden="true"></i><a href="https://www.autistici.org/mailman/listinfo/libremesh">Mailing List</a></li>
+        <li><i class="fa-li fa fa-comments" aria-hidden="true"></i><a href="https://matrix.to/#/#libremesh-dev:matrix.guifi.net">Element Chatroom</a></li>
+    </ul>
+</div>
+
+    </aside>
+    
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>Last updated 2023-04-01 14:06:29</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>

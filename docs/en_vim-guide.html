@@ -1,0 +1,301 @@
+<!doctype html>
+
+<!--[if IE 9]>
+<html class="lt-ie10" lang=""> <![endif]-->
+<html lang="" class="no-js" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vim tutorial</title>
+
+
+    <meta name="description"
+          content="The LibreMesh project, a set of tools for making the free networks possible"/>
+	
+    <link rel="stylesheet" href="/css/foundation.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/coderay.css"/>
+    <link rel="stylesheet" href="/css/asciidoctor.css"/>
+    <link rel="stylesheet" href="/css/lime.css"/>
+    <script src="/js/vendor/modernizr.js"></script>
+    <script src="/js/toc.js"></script>
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">
+                    <img src="/logo/logo_nano.png"></img>
+                    <span class="top-bar-title">LibreMesh</span>
+                </a>
+            </h1>
+        </li>
+	<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+    </ul>
+    
+<!-- lang --> 
+<ul class="lng">
+
+
+
+
+
+    </ul>
+<!-- fine lang-->
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/">Home</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/news.html">News</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/communication.html">Communication</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/getit.html">Get it!</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/howitworks.html">How it works</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/development.html">Development</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/docs/">Documentation</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/about.html">About</a></li>
+
+
+        </ul>
+    </section>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+    <!-- Docs Sidebar -->
+
+    
+    <aside class="large-3 columns">
+        <h4>Documentation</h4>
+<div class="panel">
+    <div id="toc" class="toc">
+        <ul class="sectlevel0">
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/"> Documentation</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-rocket" aria-hidden="true"></i><a href="/docs/en_quick_starting_guide.html"> Quick Starting Guide</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-hand-o-right" aria-hidden="true"></i><a href="/docs/en_connecting_nodes.html"> Connecting to LibreMesh nodes</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-cogs" aria-hidden="true"></i><a href="/docs/en_config.html"> Configuration</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-plug" aria-hidden="true"></i><a href="/docs/en_changing_network_behavior.html"> Change Ethernet config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wifi" aria-hidden="true"></i><a href="/docs/en_change_wifi_behavior.html"> Change WiFi config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/hardware/"> Hardware</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wrench" aria-hidden="true"></i><a href="/docs/en_troubleshooting.html"> Troubleshooting</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+    </aside>
+    
+
+    <!-- End Docs Sidebar -->
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sectionbody ">
+            
+            <div class="paragraph text-right">
+                <p><span class="icon"><i class="fa fa-plus-square"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/new/master/docs"></a>
+                </p>
+            </div>
+            
+            <div class="paragraph text-right">
+                <p>
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/edit/master/docs/en_vim-guide.txt"></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="sect1">
+<h2 id="a_very_short_vim_tutorial">A very short Vim tutorial</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vim is an extremely powerful console editor based on a clever idea:
+the keyboard keys can be used both for normal typing (Insert mode) and for
+editing actions (Command mode).</p>
+</div>
+<div class="paragraph">
+<p>You just have to remember that there are these two modes of operation
+and how to switch between them!</p>
+</div>
+<div class="paragraph">
+<p>To switch from Command mode to Insert mode you press</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>i</code> (to type where the cursor is) or</p>
+</li>
+<li>
+<p><code>o</code> (to create a new line).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To switch from the Insert mode to the Command mode you press <code>[Escape]</code>.</p>
+</div>
+<div class="paragraph">
+<p>At the Command mode you can</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>navigate with the arrows</p>
+</li>
+<li>
+<p>delete with <code>x</code> and <code>X</code></p>
+</li>
+<li>
+<p>search with <code>/</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To exit saving the file, enter the Command mode pressing <code>[Escape]</code> and type <code>:wq</code>. To exit without saving enter Command mode and press <code>:q!</code>.</p>
+</div>
+<div class="paragraph">
+<p>All will become clear if you type the following on a terminal:
+<code>vim hello.txt&lt;Enter&gt;ihello world&lt;Escape&gt;onew line&lt;Escape&gt;:wq&lt;Enter&gt;cat hello.txt&lt;Enter&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s all!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="discover_more">Discover more</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://www.tutorialspoint.com/unix/unix-vi-editor.htm" class="bare">https://www.tutorialspoint.com/unix/unix-vi-editor.htm</a></p>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>Last updated 2023-04-01 14:06:29</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>

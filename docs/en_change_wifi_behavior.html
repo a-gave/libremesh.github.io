@@ -1,0 +1,354 @@
+<!doctype html>
+
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html lang="en" class="no-js" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Change WiFi config</title>
+
+
+    <meta name="description"
+          content="The LibreMesh project, a set of tools for making the free networks possible"/>
+	
+    <link rel="stylesheet" href="/css/foundation.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/coderay.css"/>
+    <link rel="stylesheet" href="/css/asciidoctor.css"/>
+    <link rel="stylesheet" href="/css/lime.css"/>
+    <script src="/js/vendor/modernizr.js"></script>
+    <script src="/js/toc.js"></script>
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">
+                    <img src="/logo/logo_nano.png"></img>
+                    <span class="top-bar-title">LibreMesh</span>
+                </a>
+            </h1>
+        </li>
+	<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+    </ul>
+    
+<!-- lang --> 
+<ul class="lng">
+
+
+
+
+
+  <li>
+    <a href="/docs/en_change_wifi_behavior.html" class="en">en</a>
+  </li>
+
+    </ul>
+<!-- fine lang-->
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/">Home</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/news.html">News</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/communication.html">Communication</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/getit.html">Get it!</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/howitworks.html">How it works</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/development.html">Development</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/docs/">Documentation</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/about.html">About</a></li>
+
+
+        </ul>
+    </section>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+    <!-- Docs Sidebar -->
+
+    
+    <aside class="large-3 columns">
+        <h4>Documentation</h4>
+<div class="panel">
+    <div id="toc" class="toc">
+        <ul class="sectlevel0">
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/"> Documentation</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-rocket" aria-hidden="true"></i><a href="/docs/en_quick_starting_guide.html"> Quick Starting Guide</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-hand-o-right" aria-hidden="true"></i><a href="/docs/en_connecting_nodes.html"> Connecting to LibreMesh nodes</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-cogs" aria-hidden="true"></i><a href="/docs/en_config.html"> Configuration</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-plug" aria-hidden="true"></i><a href="/docs/en_changing_network_behavior.html"> Change Ethernet config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li  class="active"><i class="fa fa-wifi" aria-hidden="true"></i><a href="/docs/en_change_wifi_behavior.html"> Change WiFi config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/hardware/"> Hardware</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wrench" aria-hidden="true"></i><a href="/docs/en_troubleshooting.html"> Troubleshooting</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+    </aside>
+    
+
+    <!-- End Docs Sidebar -->
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sectionbody ">
+            
+            <div class="paragraph text-right">
+                <p><span class="icon"><i class="fa fa-plus-square"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/new/master/docs">Create new page</a>
+                </p>
+            </div>
+            
+            <div class="paragraph text-right">
+                <p>
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/edit/master/docs/en_change_wifi_behavior.txt">Edit this page</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="sect1">
+<h2 id="libremesh_interface_specific_wifi_configuration">LibreMesh interface-specific WiFi configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If no specific WiFi interface configuration is present, the general WiFi configuration section is used for all the interfaces.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the general LibreMesh config file options see <a href="en_config.html">The config file</a> page.</p>
+</div>
+<div class="paragraph">
+<p>For more examples and offline documentation check out <code>/docs/lime-example.txt</code> on the router or, still on the router, on <a href="http://thisnode.info/docs/lime-example.txt" class="bare">http://thisnode.info/docs/lime-example.txt</a>, or <a href="https://github.com/libremesh/lime-packages/blob/master/packages/lime-docs/files/www/docs/lime-example.txt">lime-example.txt file online</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="specific_wireless_interface_configuration">Specific wireless interface configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To create an interface-specific configuration you must create a new wifi section named radio<strong>N</strong>, where <strong>N</strong> is the radio index (to see WiFi devices list execute: <code>wifi status</code>).</p>
+</div>
+<div class="paragraph">
+<p>In the following example radio0 is used only for wireless client, radio1 is used only for Access Point with a custom ESSID name, and radio2 just for meshing.</p>
+</div>
+<div class="listingblock">
+<div class="title">WiFi interface-specific options (override general option), multiple allowed</div>
+<div class="content">
+<pre>config wifi radio0
+	list modes 'client'
+	option channel 'auto'
+	option client_ssid 'SomeWiFiNetwork'
+	option client_key 'SomeWPApskPassword'
+	option client_encryption 'psk2'
+
+config net wirelessclientWAN
+	option linux_name 'wlan0-sta'
+	list protocols 'wan'
+
+config wifi radio1
+	list modes 'apname'
+	option apname_ssid 'MyHouse'
+
+config wifi radio2
+	list modes 'ieee80211s'
+	option ieee80211s_mesh_fwding '0'
+	option ieee80211s_mesh_id 'LiMe'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first section configures one radio interface to be only a wireless client (station associated to a wireless access point).
+The second section configures the just created client interface for obtaining an IP from the access point DHCP server. The employed name <code>wlan0-sta</code> has to match the name of the interface created by the first section.</p>
+</div>
+<div class="paragraph">
+<p>The specific-interface configuration sections must be appended in file <strong>/etc/config/lime-node</strong> in addition to the already existing generic configuration.</p>
+</div>
+<div class="paragraph">
+<p>In the third section, <code>radio1</code> is configured for just being an access point with custom ESSID name, each specified option overrides the respective general WiFi option (listed in <a href="en_config.html">The config file</a> page), all the non-specified options (like <code>distance</code> or <code>channel</code>) are taken from the general wifi section.
+Specifying an entry of a list, replaces the entire list (for example, setting the <code>apname</code> entry to the <code>modes</code> list means that for this interface, <code>apname</code> will be the only active mode).</p>
+</div>
+<div class="paragraph">
+<p>To apply the changes run <code>lime-config</code> and <code>reboot</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">interface names</div>
+<div class="paragraph">
+<p>In the just reported example, <code>radio0</code> has to exist (check with <code>wifi status</code>) and also <code>wlan0-sta</code> has to be created by the first section in order to be used in the second section (after running <code>lime-config</code>, check with <code>ip link show</code>).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Network interface specific options</div>
+<div class="paragraph">
+<p>Available protocols: bmx6, bmx7, batadv, olsr, olsr6, olsr2, bgp, wan, lan, manual, static, babeld, apbb, client</p>
+</div>
+<div class="paragraph">
+<p>Note that some of these protocols will require the relative <code>lime-proto-...</code> package being installed, otherwise the protocol entry will be ignored.</p>
+</div>
+<div class="paragraph">
+<p><code>proto:vlan_number</code> works too (something like bmx6:13 is supported). If VLAN is 0, no VLAN will be used.</p>
+</div>
+<div class="paragraph">
+<p>VLAN type defaults to 802.1ad, but it can be set to 80.1q adding another option <code>proto:vlan_number:8021q</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you use manual do not specify other protocols, may result in an unpredictable behavior/configuration.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="specific_ethernet_interface_configuration">Specific ethernet interface configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="en_changing_network_behavior.html">Change ethernet behavior</a> page.</p>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>Last updated 2023-04-01 14:06:29</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>

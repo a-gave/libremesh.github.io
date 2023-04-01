@@ -1,0 +1,501 @@
+<!doctype html>
+
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html lang="en" class="no-js" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Quick Starting Guide</title>
+
+
+    <meta name="description"
+          content="The LibreMesh project, a set of tools for making the free networks possible"/>
+	
+    <link rel="stylesheet" href="/css/foundation.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/coderay.css"/>
+    <link rel="stylesheet" href="/css/asciidoctor.css"/>
+    <link rel="stylesheet" href="/css/lime.css"/>
+    <script src="/js/vendor/modernizr.js"></script>
+    <script src="/js/toc.js"></script>
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">
+                    <img src="/logo/logo_nano.png"></img>
+                    <span class="top-bar-title">LibreMesh</span>
+                </a>
+            </h1>
+        </li>
+	<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+    </ul>
+    
+<!-- lang --> 
+<ul class="lng">
+
+
+
+
+
+  <li>
+    <a href="/docs/en_quick_starting_guide.html" class="en">en</a>
+  </li>
+
+  <li>
+    <a href="/docs/it_guida_rapida_per_iniziare.html" class="it">it</a>
+  </li>
+
+    </ul>
+<!-- fine lang-->
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/">Home</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/news.html">News</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/communication.html">Communication</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/getit.html">Get it!</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/howitworks.html">How it works</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/development.html">Development</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/docs/">Documentation</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/about.html">About</a></li>
+
+
+        </ul>
+    </section>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+    <!-- Docs Sidebar -->
+
+    
+    <aside class="large-3 columns">
+        <h4>Documentation</h4>
+<div class="panel">
+    <div id="toc" class="toc">
+        <ul class="sectlevel0">
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/"> Documentation</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li  class="active"><i class="fa fa-rocket" aria-hidden="true"></i><a href="/docs/en_quick_starting_guide.html"> Quick Starting Guide</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-hand-o-right" aria-hidden="true"></i><a href="/docs/en_connecting_nodes.html"> Connecting to LibreMesh nodes</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-cogs" aria-hidden="true"></i><a href="/docs/en_config.html"> Configuration</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-plug" aria-hidden="true"></i><a href="/docs/en_changing_network_behavior.html"> Change Ethernet config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wifi" aria-hidden="true"></i><a href="/docs/en_change_wifi_behavior.html"> Change WiFi config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/hardware/"> Hardware</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wrench" aria-hidden="true"></i><a href="/docs/en_troubleshooting.html"> Troubleshooting</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+    </aside>
+    
+
+    <!-- End Docs Sidebar -->
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sectionbody ">
+            
+            <div class="paragraph text-right">
+                <p><span class="icon"><i class="fa fa-plus-square"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/new/master/docs">Create new page</a>
+                </p>
+            </div>
+            
+            <div class="paragraph text-right">
+                <p>
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/edit/master/docs/en_quick_starting_guide.txt">Edit this page</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="sect1">
+<h2 id="compatible_hardware">Compatible Hardware</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is recommended that the router has at least 8 MB of flash memory and 64 MB of RAM. For routers with 4 MB flash memory or 32 MB of RAM, use the special firmware named <code>-mini</code> or <a href="../development.html">compile one yourself</a> excluding some heavy packages (e.g. <code>opkg</code> or the LuCI and lime-app web interfaces).</p>
+</div>
+<div class="paragraph">
+<p>Not all the OpenWrt supported routers work with LibreMesh (at least, not with its default configuration), for a list of the tested hardware, see our <a href="hardware/index.html">hardware</a> page.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="get_the_firmware">Get the Firmware</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="choose_a_source_for_your_firmware">Choose a source for your firmware</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>For the latest stable release with default configuration (e.g. wireless AP name <code>LibreMesh.org</code>) you can use our <a href="https://downloads.libremesh.org/releases/2020.1/">downloads</a> site (recommended);</p>
+</li>
+<li>
+<p>For using the latest LibreMesh code, you can compile the firmware on your GNU/Linux computer (or virtual machine) using OpenWrt buildroot as described in the <a href="../development.html">Development</a> page (advanced);</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more options check the <a href="../getit.html">Get It</a> page.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="download_the_correct_firmware_image">Download the correct firmware image</h3>
+<div class="paragraph">
+<p>Find the download for your router by name or model. You can find more detailed router model instructions <a href="https://openwrt.org/toh/start">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you are installing for the first time (a router with stock firmware), choose the link ending with <code>-factory.bin</code>. If there&#8217;s no <code>-factory.bin</code> image or you are upgrading an existing install of LibreMesh or OpenWrt, choose the link ending with <code>-sysupgrade.bin</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installation_procedure">Installation Procedure</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="open_your_router_web_interface">Open your router web interface</h3>
+<div class="paragraph">
+<p>Using an ethernet cable connect to a LAN port on your router. Make sure that the ethernet cable is the only active network interface on your computer (e.g. disable the wireless interface).</p>
+</div>
+<div class="paragraph">
+<p><em>If the router is running stock firmware</em>, follow manufacturer instructions to connect to the router. Its IP should be written on the original box or under the router. Usually just opening <code>192.168.0.1</code> or <code>192.168.1.1</code> in a web browser lets you reach the router web interface. If you can&#8217;t connect to the router because you can&#8217;t find its IP, you can try the IP address of your gateway. For getting it go to the terminal and use <code>netstat -rn</code> (mac), or <code>ip route show default</code> (Linux). More details on finding your router&#8217;s IP can be found <a href="http://www.howtogeek.com/233952/how-to-find-your-routers-ip-address-on-any-computer-smartphone-or-tablet/">here</a> and <a href="http://www.computerworld.com/article/2474776/wireless-networking/network-security-find-the-ip-address-of-your-home-router.html">here</a>.</p>
+</div>
+<div class="paragraph">
+<p><em>If the router is running OpenWrt</em> the instructions in the previous paragraph should apply.</p>
+</div>
+<div class="paragraph">
+<p><em>If the router is running LibreMesh</em> just opening <a href="http://thisnode.info" class="bare">http://thisnode.info</a> should get you to the web interface.</p>
+</div>
+<div class="paragraph">
+<p>Then you can log in as admin (if unchanged, the username and password will be on the router&#8217;s box, on OpenWrt by default it&#8217;s an empty password).</p>
+</div>
+<div class="paragraph">
+<p>For more connection options see <a href="en_connecting_nodes.html">How to connect to nodes</a> page.</p>
+</div>
+<div class="paragraph">
+<p>If you suspect you can&#8217;t connect to your router because of a damaged configuration, follow the <a href="en_troubleshooting.html">Troubleshooting</a> guide.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="flashing">Flashing</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For Ubiquiti AirMax serie routers, flashing on top of AirOS versions 5.6.x will brick your device (the <a href="https://web.archive.org/web/20160805173552/bloodhound.aredn.org/products/AREDN/wiki/HowTo/Unbrick">recovery procedure</a> requires opening the router chassis and connecting directly to its serial port). If your router has AirOS 5.6.x, you will have to download an AirOS 5.5.x version (for XM hardware <a href="https://dl.ubnt.com/firmwares/XN-fw/v5.5.11/XM.v5.5.11.28002.150723.1344.bin">here</a>, for XW hardware <a href="https://dl.ubnt.com/firmwares/XW-fw/v5.5.10/XW.v5.5.10-u2.28005.150723.1358.bin">here</a> and for TI hardware <a href="https://dl.ubnt.com/firmwares/XN-fw/v5.5.11/TI.v5.5.11.28002.150723.1518.bin">here</a>) and use it to downgrade your router.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Once you&#8217;ve logged in as root or admin in your router, reach the firmware upgrade page.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If there&#8217;s a <code>Keep Settings</code> option, take care to UNCHECK it. It is checked by default on OpenWrt.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Upload the firmware image file you&#8217;ve downloaded and click <code>Flash Image</code>. Wait a couple of minutes for the process to complete. Reconnect to the ethernet interface (for getting the new IP) and open <a href="http://thisnode.info" class="bare">http://thisnode.info</a>.</p>
+</div>
+<div class="paragraph">
+<p>Congratulations, you have a working LibreMesh router!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="connect_to_your_libremesh_router">Connect to Your LibreMesh Router</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Just connect to the router via its wireless AP interface or via ethernet cable on its LAN port and open <a href="http://thisnode.info" class="bare">http://thisnode.info</a> in the web browser.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If is the first time you connect to the router, you will have to set an admin/root password. Leaving a LibreMesh router with no admin password is a huge security risk.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For more connection options see <a href="en_connecting_nodes.html">How to connect to nodes</a> page.</p>
+</div>
+<div class="paragraph">
+<p>If you suspect you can&#8217;t connect to your router because of a damaged configuration, follow the <a href="en_troubleshooting.html">Troubleshooting</a> guide.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="share_the_internet_connection_with_the_libremesh_network">Share the Internet Connection with the LibreMesh Network</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LibreMesh is automatically sharing with the rest of the mesh network any internet connection is connected to the router WAN port. There&#8217;s no problem if more than one internet gateway is connected to the LibreMesh network, likely the one closest to the client will be used.</p>
+</div>
+<div class="paragraph">
+<p>If the LibreMesh router has no WAN port (just LAN ports, or just one ethernet port), one of the ethernet ports has to be configured as WAN port in order to share the internet connection. Refer to next section for configuration.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration">Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Refer to the <a href="en_config.html">LibreMesh config file</a> page and to <a href="https://github.com/libremesh/lime-packages/blob/master/packages/lime-docs/files/www/docs/lime-example.txt">/docs/lime-example.txt</a> file for detailed information.</p>
+</div>
+<hr>
+<hr>
+<hr>
+</div>
+</div>
+<h1 id="using_the_console_interface_optional" class="sect0">Using the Console Interface (optional)</h1>
+<div class="paragraph">
+<p>Until here we went through the installation, connection and configuration procedures using the LibreMesh web interface.</p>
+</div>
+<div class="paragraph">
+<p>As in every Linux-based system there&#8217;s the availability of a textual console interface for advanced configuration and hardcore users.</p>
+</div>
+<div class="paragraph">
+<p>This part of the guide should not be needed for normal LibreMesh use.</p>
+</div>
+<div class="sect1">
+<h2 id="flashing_via_the_console_interface_optional">Flashing Via the Console Interface (optional)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is possible just if you&#8217;re upgrading an existing OpenWrt or LibreMesh installation, not from stock firmware.</p>
+</div>
+<div class="paragraph">
+<p>Copy the downloaded firmware image to the <code>/tmp</code> directory on your target router using the <code>scp</code> command.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do not try to copy the firmware image to directories different from <code>/tmp</code>. They have limited memory access.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In case the router already has LibreMesh you can do this with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>scp /LOCAL/PATH/TO/BUILD.bin root@thisnode.info:/tmp/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Otherwise (upgrading from OpenWrt) you will need to insert the router IP address (often 192.168.1.1) in</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>scp /LOCAL/PATH/TO/BUILD.bin root@ROUTERIPADDRESS:/tmp/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now connect to the console interface using <code>ssh</code>, if LibreMesh is already running with <code>ssh root@thisnode.info</code> or with <code>ssh root@ROUTERIPADDRESS</code> if OpenWrt is running.</p>
+</div>
+<div class="paragraph">
+<p>Then enter the <code>/tmp</code> directory where the firmware is present with <code>cd /tmp</code>, check the presence of the file with <code>ls</code> and install it with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>sysupgrade -n openwrt-ROUTERMODEL-squashfs-sysupgrade.bin</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>-n</code> option for sysupgrade command is needed for discarding the previous configuration files. Omitting the <code>-n</code> option is never a good idea when flashing LibreMesh.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For more information on the sysupgrade process, see these <a href="https://openwrt.org/docs/guide-user/installation/generic.sysupgrade">OpenWRT instructions</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuring_via_the_console_interface_optional">Configuring Via the Console Interface (optional)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Rather than using the web interface, modifying directly <code>/etc/config/lime-node</code> file allows to access more advanced options but increases the risk of writing broken configuration.</p>
+</div>
+<div class="paragraph">
+<p>You can use the <code>vim</code> text editor (a short vim guide <a href="en_vim-guide.html">here</a>) for editing <code>/etc/config/lime-node</code>, the settings in this file will override the community ones in <code>/etc/config/lime-community</code> and the default ones in <code>/etc/config/lime-defaults</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can find examples and documentation in the <code>/docs/lime-example.txt</code> file (you can find it online <a href="https://github.com/libremesh/lime-packages/blob/master/packages/lime-docs/files/www/docs/lime-example.txt">here</a>) as well as in <a href="en_config.html">LibreMesh config file</a> page on this website.</p>
+</div>
+<div class="paragraph">
+<p>After saving the edits to the <code>/etc/config/lime-node</code> file, apply the changes to system configuration files launching the <code>lime-config</code> command. Next, reboot the router with <code>reboot &amp;&amp; exit</code> to apply the new settings.</p>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>Last updated 2023-04-01 14:06:29</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>

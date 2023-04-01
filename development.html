@@ -1,0 +1,561 @@
+<!doctype html>
+
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html lang="en" class="no-js" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Development</title>
+
+
+    <meta name="description"
+          content="The LibreMesh project, a set of tools for making the free networks possible"/>
+	
+    <link rel="stylesheet" href="/css/foundation.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/coderay.css"/>
+    <link rel="stylesheet" href="/css/asciidoctor.css"/>
+    <link rel="stylesheet" href="/css/lime.css"/>
+    <script src="/js/vendor/modernizr.js"></script>
+    <script src="/js/toc.js"></script>
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">
+                    <img src="/logo/logo_nano.png"></img>
+                    <span class="top-bar-title">LibreMesh</span>
+                </a>
+            </h1>
+        </li>
+	<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+    </ul>
+    
+<!-- lang --> 
+<ul class="lng">
+
+
+
+
+
+  <li>
+    <a href="/development.html" class="en">en</a>
+  </li>
+
+  <li>
+    <a href="/es_development.html" class="es">es</a>
+  </li>
+
+    </ul>
+<!-- fine lang-->
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/">Home</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/news.html">News</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/communication.html">Communication</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/getit.html">Get it!</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/howitworks.html">How it works</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li  class="active"><a href="/development.html">Development</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/docs/">Documentation</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/about.html">About</a></li>
+
+
+        </ul>
+    </section>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+    <!-- Docs Sidebar -->
+
+    
+
+    <!-- End Docs Sidebar -->
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sectionbody ">
+            
+            <div class="paragraph text-right">
+                <p>
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/edit/master/development.txt">Edit this page</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="sect1">
+<h2 id="the_source_code">The Source Code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The code is stored inside a git tree which contains all branches and releases.</p>
+</div>
+<div class="paragraph">
+<p>All repositories can be browsed online through
+<a href="https://github.com/libremesh/">GitHub</a>.</p>
+</div>
+<div class="paragraph">
+<p>Most of the development happens in the <em>lime-packages</em> git repository which can be browsed on <a href="https://github.com/libremesh/lime-packages">GitHub</a> or downloaded using git:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git clone https://github.com/libremesh/lime-packages.git
+cd lime-packages</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="compiling_libremesh_from_source_code">Compiling LibreMesh from source code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This procedure has been tested on GNU/Linux, on other systems it could require some modifications or it can be run in a Linux virtual machine. Generally, the first compilation takes a few hours and requires at least 10 GB of disk space.</p>
+</div>
+<div class="paragraph">
+<p>First of all you need to install a few packages to your system.
+Building OpenWrt requires a bunch of installed software.</p>
+</div>
+<div class="paragraph">
+<p>If you are unsure about your system having all the dependencies installed, you can just go on with the OpenWrt compilation (see below) and, if it fails, check out the error messages.</p>
+</div>
+<div class="paragraph">
+<p>On an Ubuntu system, the following command will install the minimum compilation dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo apt update
+sudo apt install --no-install-recommends git ca-certificates subversion wget make gcc g++ libncurses5-dev gawk unzip file patch python3-distutils python3-minimal python2-minimal libpython2-stdlib</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For other Linux distributions the packets list could be slightly different, check out the <a href="https://openwrt.org/docs/guide-developer/build-system/install-buildsystem">OpenWrt build system installation page</a>.</p>
+</div>
+<div class="paragraph">
+<p>Then you need to get the OpenWrt source code.
+Make sure to <em>git clone</em> the source code as normal user (i.e. do not use root): the compilation will refuse to run if the administrator user <em>root</em> is being used.</p>
+</div>
+<div class="paragraph">
+<div class="title">Download OpenWrt source code</div>
+<p>LibreMesh can be built on top of various OpenWrt versions. We officially support the compilation with OpenWrt Old Stable (19.07.10) versions (LibreMesh still have to be adapted to work with the latest OpenWrt 21.02 version).</p>
+</div>
+<div class="paragraph">
+<p>For compiling LibreMesh on top of the Old Stable version of OpenWrt:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git clone -b v19.07.10 --single-branch https://git.openwrt.org/openwrt/openwrt.git</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Enter OpenWrt build root</div>
+<div class="content">
+<pre>cd openwrt</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Take default OpenWrt repositories feeds</div>
+<div class="content">
+<pre>cp feeds.conf.default feeds.conf</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">And add LibreMesh repositories to the OpenWrt feeds</div>
+<div class="content">
+<pre>cat &lt;&lt; EOF &gt;&gt; feeds.conf
+
+src-git libremesh https://github.com/libremesh/lime-packages.git;OpenWrt_19.07_compatible
+src-git profiles https://github.com/libremesh/network-profiles.git
+EOF</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>If you want to build the stable version of LibreMesh:</strong> replace <code>OpenWrt_19.07_compatible</code> with <code>v2020.1</code> at the end of the
+line of the libremesh feed to specify the tag <code>v2020.1</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>The <code>master</code> branch is <strong>not</strong> compatible with OpenWrt 19.07.</strong> Instead, it is being tested for OpenWrt 22.03.</p>
+</div>
+<div class="listingblock">
+<div class="title">Update the packages from the feeds</div>
+<div class="content">
+<pre>scripts/feeds update -a
+scripts/feeds install -a</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Run the configuration menu</div>
+<div class="content">
+<pre>make menuconfig</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check out the <code>target</code> (e.g. <code>ATH79</code>), <code>subtarget</code> (e.g. <code>generic</code>) and <code>profile</code> (e.g. <code>tl-wdr3600-v1</code>) of your router on <a href="https://openwrt.org/toh/start">OpenWrt table of hardware</a>.</p>
+</div>
+<div class="paragraph">
+<p>Select the <em>Target System</em>, <em>Subtarget</em> and <em>Target Profile</em> accordingly.</p>
+</div>
+<div class="paragraph">
+<p>Optionally, <strong>deselect</strong> erroneous feeds locations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Image configuration → Separate feed repositories → Enable feed libremesh</p>
+</li>
+<li>
+<p>Image configuration → Separate feed repositories → Enable feed profiles</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Deselect</strong> problematic packages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Base system &#8594; dnsmasq</p>
+</li>
+<li>
+<p>Network &#8594; odhcpd-ipv6only</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Optionally, <strong>deselect</strong> unused packages:
+- Network &#8594; ppp</p>
+</div>
+<div class="paragraph">
+<p>If you local community has a profile in the <a href="https://github.com/libremesh/network-profiles/">network-profiles repository</a>, you can select it in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LibreMesh &#8594; network-profile &#8594; profile-your_community-your_profile</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network profiles are the specific configuration from the communities, and are stored in this collective
+<a href="https://github.com/libremesh/network-profiles/">repository</a>, but they can also be kept locally, depending on how every community network manages itself. For more instructions on how to create a profile or how to use a local one, check out the <a href="development-network_profiles.html">network profiles page</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Select</strong> (press space until when an asterisk <code>*</code> appears, like <code>&lt;*&gt;</code>) LibreMesh packages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LibreMesh (or LiMe) → Offline Documentation → lime-docs-minimal (LibreMesh minimal documentation)</p>
+</li>
+<li>
+<p>LibreMesh (or LiMe) → lime-app (LibreMeshApp)</p>
+</li>
+<li>
+<p>LibreMesh (or LiMe) → lime-hwd-openwrt-wan (Respect openwrt wan interface as default)</p>
+</li>
+<li>
+<p>LibreMesh (or LiMe) → lime-proto-anygw (LibreMesh anygw proto support)</p>
+</li>
+<li>
+<p>LibreMesh (or LiMe) → lime-proto-babeld (LibreMesh babeld proto support)</p>
+</li>
+<li>
+<p>LibreMesh (or LiMe) → lime-proto-batadv (LibreMesh batman-adv proto support)</p>
+</li>
+<li>
+<p>LibreMesh (or LiMe) → shared-state</p>
+<div class="ulist">
+<ul>
+<li>
+<p>shared-state-babeld_hosts (babeld-hosts module for shared-state)</p>
+</li>
+<li>
+<p>shared-state-bat_hosts (bat-hosts module for shared-state)</p>
+</li>
+<li>
+<p>shared-state-nodes_and_links (nodes_and_links module for shared-state)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Utilities &#8594; babeld-auto-gw-mode</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If after the compilation you don&#8217;t see the compiled image in the <code>bin/targets/.../.../</code> folder, it is possible that your router has such a small flash memory that the aforementioed packages don&#8217;t fit in it (it can happen with routers having 4 MB of flash memory, check this on the <a href="https://openwrt.org/toh/start">OpenWrt Table of Hardware</a>, or when selecting huge packages to be included). In this case, you can remove the <code>.config</code> generated packages list and repeat the packages selection without including <code>lime-app</code>. If the compiled image is still too large, try selecting only <code>lime-proto-anygw</code>, <code>lime-proto-batadv</code> and <code>lime-proto-babeld</code> or following <a href="https://openwrt.org/docs/guide-user/additional-software/saving_space">this guide</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Some more packages are recommended but not mandatory for a working LibreMesh network. Consider avoiding to select the following packages <em>only</em> if the created image is too large and does not fit in the router memory.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LibreMesh (or LiMe) &#8594; check-date-http (Keep local date under NTP too far away skew)</p>
+</li>
+<li>
+<p>LibreMesh (or LiMe) &#8594; Offline Documentation &#8594; lime-docs (LibreMesh full documentation)</p>
+</li>
+<li>
+<p>LibreMesh (or LiMe) &#8594; lime-hwd-ground-routing (Manage 802.1q VLANs for ground routing)</p>
+</li>
+<li>
+<p>LibreMesh (or LiMe) &#8594; lime-debug (libremesh debug utils)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally and optionally, httpS for the web interface can be enabled selecting (beware that the web interace will be shown as <strong>not trusted</strong>):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Libraries &#8594; libustream-wolfssl</p>
+</li>
+<li>
+<p>Utilities &#8594; Encryption &#8594; px5g-standalone</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Finally, also the 802.11s mesh connections can be password protected, this will require a specific configuration and this package to be selected:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Network &#8594; wpad-mesh-wolfssl</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and this to be <strong>de</strong>-selected:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Network &#8594; wpad-basic</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Due to a <a href="https://bugs.openwrt.org/index.php?do=details&amp;task_id=3441">known bug</a>, can happen that wpad-mesh-wolfssl gets automatically deselected. <strong>Each time you use menuconfig, please check if wpad-mesh-wolfssl is still selected.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In order to have additional packages, the easiest way is to select them in menuconfig. More packages can be installed afterwards via <code>opkg</code>, but some of these require a specific kernel configuration to be in place. This can be achieved following <a href="development-kernel_vermagic.html">these additional instructions dealing with kernel vermagic</a>. Beware that this will increase noticeably the time and storage space required for the compilation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Save and exit.</p>
+</div>
+<div class="paragraph">
+<p>At this stage there is the possibility to include custom files in the compiled firmware image. For this, you will have to create, inside the <code>openwrt/</code> directory, a <code>files/</code> directory containing the directory structure and files you want to add. For example, if you want to have a <code>/etc/config/lime-community</code> file you need to do the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mkdir -p files/etc/config/
+touch files/etc/config/lime-community</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and then edit the newly created <code>lime-community</code> file including your custom content. If a file from a package has the same name and path as a file in this directory, it will be overwritten. This is a quick way to include a custom configuration file, without the need to create an online <a href="development-network_profiles.html">network profile</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Finally, compile the images</div>
+<div class="content">
+<pre>make -j$(nproc)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If everything goes well you should find the produced binaries inside the <code>bin/</code> directory.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="submitting_patches">Submitting Patches</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We accept pull requests via GitHub. But patches can also be submitted via the lime-dev <a href="communication.html">mailing list</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="the_web_presence">The Web Presence</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The pages you&#8217;re reading are generated from text files using the
+<a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> suite plus <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+</div>
+<div class="paragraph">
+<p>Any changes made to <a href="https://github.com/libremesh/libremesh.github.io">the website repository</a> will be reflected on our <code>libremesh.org</code> website.</p>
+</div>
+<div class="paragraph">
+<p>In order to generate these pages locally:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git clone https://github.com/libremesh/libremesh.github.io.git
+cd libremesh.github.io &amp;&amp; bundle install
+bundle exec jekyll serve</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more details, check the <a href="https://github.com/libremesh/libremesh.github.io/blob/master/README.adoc">README</a> on Github.</p>
+</div>
+<div class="paragraph">
+<p>If you would like to contribute to the documentation then please send patches to our mailing list or open a pull request on GitHub. An easy way to edit and file a pull request is clicking the "Edit this page" button at the top right of each page.</p>
+</div>
+<div class="paragraph">
+<p>Please use the <a href="http://www.methods.co.nz/asciidoc/userguide.html">AsciiDoc syntax</a> for contributions on the web page.</p>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    
+    <aside class="large-3 columns">
+        <h4>Links</h4>
+<div class="panel">
+    <ul class="fa-ul">
+        <li><i class="fa-li fa fa-download" aria-hidden="true"></i><a href="https://downloads.libremesh.org/releases/2020.1/">Latest Release Firmware</a></li>
+        <li><i class="fa-li fa fa-linux" aria-hidden="true"></i><a href="development.html">Build Firmware Locally</a></li>
+        <li><i class="fa-li fa fa-code-fork" aria-hidden="true"></i><a href="https://github.com/libremesh/">Source Code</a></li>
+        <li><i class="fa-li fa fa-envelope" aria-hidden="true"></i><a href="https://www.autistici.org/mailman/listinfo/libremesh">Mailing List</a></li>
+        <li><i class="fa-li fa fa-comments" aria-hidden="true"></i><a href="https://matrix.to/#/#libremesh-dev:matrix.guifi.net">Element Chatroom</a></li>
+    </ul>
+</div>
+
+    </aside>
+    
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>Last updated 2023-04-01 14:06:29</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>

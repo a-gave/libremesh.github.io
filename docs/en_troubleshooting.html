@@ -1,0 +1,627 @@
+<!doctype html>
+
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html lang="en" class="no-js" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Troubleshooting</title>
+
+
+    <meta name="description"
+          content="The LibreMesh project, a set of tools for making the free networks possible"/>
+	
+    <link rel="stylesheet" href="/css/foundation.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/coderay.css"/>
+    <link rel="stylesheet" href="/css/asciidoctor.css"/>
+    <link rel="stylesheet" href="/css/lime.css"/>
+    <script src="/js/vendor/modernizr.js"></script>
+    <script src="/js/toc.js"></script>
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">
+                    <img src="/logo/logo_nano.png"></img>
+                    <span class="top-bar-title">LibreMesh</span>
+                </a>
+            </h1>
+        </li>
+	<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+    </ul>
+    
+<!-- lang --> 
+<ul class="lng">
+
+
+
+
+
+  <li>
+    <a href="/docs/en_troubleshooting.html" class="en">en</a>
+  </li>
+
+    </ul>
+<!-- fine lang-->
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/">Home</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/news.html">News</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/communication.html">Communication</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/getit.html">Get it!</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/howitworks.html">How it works</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/development.html">Development</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/docs/">Documentation</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/about.html">About</a></li>
+
+
+        </ul>
+    </section>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+    <!-- Docs Sidebar -->
+
+    
+    <aside class="large-3 columns">
+        <h4>Documentation</h4>
+<div class="panel">
+    <div id="toc" class="toc">
+        <ul class="sectlevel0">
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/"> Documentation</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-rocket" aria-hidden="true"></i><a href="/docs/en_quick_starting_guide.html"> Quick Starting Guide</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-hand-o-right" aria-hidden="true"></i><a href="/docs/en_connecting_nodes.html"> Connecting to LibreMesh nodes</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-cogs" aria-hidden="true"></i><a href="/docs/en_config.html"> Configuration</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-plug" aria-hidden="true"></i><a href="/docs/en_changing_network_behavior.html"> Change Ethernet config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wifi" aria-hidden="true"></i><a href="/docs/en_change_wifi_behavior.html"> Change WiFi config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/hardware/"> Hardware</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li  class="active"><i class="fa fa-wrench" aria-hidden="true"></i><a href="/docs/en_troubleshooting.html"> Troubleshooting</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+    </aside>
+    
+
+    <!-- End Docs Sidebar -->
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sectionbody ">
+            
+            <div class="paragraph text-right">
+                <p><span class="icon"><i class="fa fa-plus-square"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/new/master/docs">Create new page</a>
+                </p>
+            </div>
+            
+            <div class="paragraph text-right">
+                <p>
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/edit/master/docs/en_troubleshooting.txt">Edit this page</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="sect1">
+<h2 id="unable_to_establish_ethernet_connection">Unable to establish Ethernet connection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you can&#8217;t connect to the LibreMesh router as indicated in <a href="en_connecting_nodes.html">How to connect to LibreMesh nodes</a> opening <a href="http://thisnode.info" class="bare">http://thisnode.info</a> you can try other ways.</p>
+</div>
+<div class="sect2">
+<h3 id="first_thing_wait_5_minutes">First thing: wait 5 minutes</h3>
+<div class="paragraph">
+<p>After powering up the router, <strong>up to 5 minutes can be needed</strong> for bringing up all the services including the DHCP server needed for receiving an IP when connecting. This is a known bug.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="do_not_use_custom_dns_servers">Do not use custom DNS servers</h3>
+<div class="paragraph">
+<p>For using the <a href="http://thisnode.info" class="bare">http://thisnode.info</a> address, the Domain Name System server have to be the one from the LibreMesh router you&#8217;re connecting to. Contrariwise, <strong>a fixed external DNS server would not recognize <a href="http://thisnode.info" class="bare">http://thisnode.info</a> as an existing domain</strong>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="verify_the_physical_connection">Verify the physical connection</h3>
+<div class="paragraph">
+<p>If you are connecting by cable:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>disconnect from any other network</strong> (e.g. wireless);</p>
+</li>
+<li>
+<p>verify that the cable is well plugged and that the <strong>ethernet LED are blinking</strong> on the router and on the computer port;</p>
+</li>
+<li>
+<p>verify that you&#8217;re connected to a <strong>LAN port on the router</strong> (or main) not to a WAN one (or secondary);</p>
+</li>
+<li>
+<p>use a <strong>good quality cable, with intact connector</strong>, avoid half-duplex cables (with just 4 wires, low quality);</p>
+</li>
+<li>
+<p>verify that the <strong>network manager on your computer</strong> is actually trying to connect by this cable;</p>
+</li>
+<li>
+<p>if the network manager is down or not installed (very unlikely, every operating system has one enabled by default), connect activating the ethernet interface. Refer to your operating system documentation for detailed instructions. Using Linux terminal can be done with <code>sudo ip link set dev eth0 up</code> for activating the interface, <code>eth0</code> could be named differently, like <code>enp0s25</code> on your system, check with <code>ip link show</code>. Check next section on how to obtain an IP for this connection.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you are connecting by wireless:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>disconnect from any other network (e.g. ethernet cable);</p>
+</li>
+<li>
+<p>check that the wireless physical switch is ON both on the LibreMesh router and on the computer;</p>
+</li>
+<li>
+<p>verify that the network manager on your computer is actually trying to connect to the wireless network named as your network community (with default configuration is <code>LibreMesh.org</code>) or on the "named AP" (with default configuration is something like <code>LibreMesh.org/abc123</code>), connecting to the <code>LiMe</code> wireless SSID is <em>not</em> going to work as is used just for meshing;</p>
+</li>
+<li>
+<p>if the network manager is down or not installed (very unlikely, every operating system has one enabled by default) just install one or enable the existing one. Connecting manually is doable on Linux, easy only if the AP is open, not WPA, with <code>sudo ip link set dev wlan0 up; sudo iw dev wlan0 connect &lt;your router ESSID&gt;</code> the ESSID could be your community network name or the default LibreMesh.org, <code>wlan0</code> could be named differently, like <code>wlp3s0</code> on your system, check with <code>ip link show</code>. Check next section on how to obtain an IP for this connection.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="verify_the_ipv4_connection">Verify the IPv4 connection</h3>
+<div class="paragraph">
+<p>Once the physical layer is set (the previous section), you can try to connect the normal way (opening <a href="http://thisnode.info" class="bare">http://thisnode.info</a>). If it does not work, before following with the next steps <strong>it&#8217;s needed to check if the LibreMesh router actually gave to our computer/smartphone an IPv4 to use</strong> for communicating on the network.</p>
+</div>
+<div class="paragraph">
+<p>Every network manager on every operating system should request for an IPv4 to the LibreMesh router, acting as a so-called DHCP client.</p>
+</div>
+<div class="paragraph">
+<p>The received local private IPv4 can be found following <a href="https://www.howtogeek.com/236838/how-to-find-any-devices-ip-address-mac-address-and-other-network-connection-details/">this guide</a> for most operating systems. An additional method via Linux terminal is launching the command <code>ip -4 address show scope global</code>. The local private IP will look something like <code>10.13.123.123</code>.</p>
+</div>
+<div class="paragraph">
+<p>On the Linux terminal there&#8217;s the possibility to ask manually for an IPv4 with the commands <code>sudo dhclient -x; sudo dhclient</code> or <code>sudo dhcpcd -x; sudo dhcpcd</code>.</p>
+</div>
+<div class="paragraph">
+<p>If no such address coming from the LibreMesh router can be encountered, or there&#8217;s only a <a href="https://en.wikipedia.org/wiki/Zero-configuration_networking">Zeroconf</a> IP starting with 169.254.x.x, means that the DHCP server on the router is not working (be sure to wait 5 minutes after the power up of the router, as explained above, and try connecting again) or the DHCP client on your computer/smartphone is not working. Make sure to verify the physical connection as described above, specifically make sure to connect to a LAN port on the router and not to a WAN port. In this case the method described on the next section "Connect using gateway IPv4" is not applicable, while the other methods should work anyway.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="connect_using_gateway_ipv4">Connect using gateway IPv4</h3>
+<div class="paragraph">
+<p>If trying to connect to <a href="http://thisnode.info" class="bare">http://thisnode.info</a> (as explained in <a href="en_connecting_nodes.html">normal connection procedure</a>) does not work AND an IPv4 was received for your computer/smartphone from the gateway as described in section <em>Verify the IPv4 connection</em>, <strong>you can take your gateway (default route) IPv4 address and connect to it</strong>. The address to use in not the one discovered in the previous section.</p>
+</div>
+<div class="paragraph">
+<p>When you&#8217;re physically (either via ethernet cable or via wireless) connected to the router and you receive an IPv4 from it, you receive also the IPv4 direction of the gateway (default route). Please take care to disconnect from any other wireless or wired networks, otherwise a wrong gateway IPv4 can be obtained.</p>
+</div>
+<div class="paragraph">
+<p>For obtaining the gateway direction using a Windows, Mac or Linux computer or Android smartphone refer to <a href="https://www.howtogeek.com/233952/how-to-find-your-routers-ip-address-on-any-computer-smartphone-or-tablet/">this guide</a>.</p>
+</div>
+<div class="paragraph">
+<p>If the above guide does not work for you and you&#8217;re on a Linux computer, the gateway (default route) IPv4 can be obtained using the terminal: open a terminal (open your Linux distro menu, type "terminal" and select the first result) and execute the command</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ip -4 route show scope global</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output should be similar to: <code>default via 10.13.0.1 dev enp0s0 proto static metric 100</code> so in this example our gateway IPv4 is <code>10.13.0.1</code>. In case the output was instead <code>command not found: ip</code> you can find the same information using the older commands <code>route -n | grep G</code> or <code>netstat -nr | grep G</code>.</p>
+</div>
+<div class="paragraph">
+<p>The obtained IPv4 is not relative of a specific LibreMesh router, indeed, because of a feature called <em>anygw</em> this IPv4 is common for all the routers. In our case this doesn&#8217;t matter because we just want connect to the directly connected one and this will work as expected.</p>
+</div>
+<div class="paragraph">
+<p>For example let&#8217;s use <code>10.13.0.1</code> as the gateway address. <strong>You can open the IPv4 direction inserting it directly in the URL bar of the browser</strong> (not in the search bar): <a href="http://10.13.0.1" class="bare">http://10.13.0.1</a></p>
+</div>
+<div class="paragraph">
+<p>If we can&#8217;t access the web interface (can happen if we installed a LibreMesh version without web interface), we can try connecting via SSH:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ssh root@10.13.0.1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>If no root password</strong> was set and the password login was not disabled by the network-profile, <strong>a blank password access is granted</strong>, otherwise the router root password is prompted.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You could get an error like this: <code>Unable to negotiate with 10.13.0.1 port 22: no matching host key type found. Their offer: ssh-rsa</code>. In this case, you just have to add two options to the SSH command: <code>-o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa</code>, like this: <code>ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa root@10.13.0.1</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="discover_ipv4_of_your_router">Discover IPv4 of your router</h3>
+<div class="paragraph">
+<p>Do this <strong>only</strong> if the section <em>Verify the IPv4 connection</em> instructions failed and so the easy <em>Connect using the gateway IPv4</em> is not a valid way. For following this specific way you likely need a Linux computer.</p>
+</div>
+<div class="paragraph">
+<p>Install <code>netdiscover</code> package from your Linux distro repositories. Make sure to have a proper physical connection, re-read <em>Verify the physical connection</em> and disconnect from any other network. Run <code>sudo netdiscover -f</code>. Some IPv4 similar to <code>10.13.0.1</code> should appear. Add an IPv4 to your computer network interface used for connecting with the first three fields of the IP identical to the router one and the fourth different, for example <code>10.13.0.2</code> with netmask <code>255.255.255.0</code> or <code>/24</code>. Connect to the router inserting its IP in the browser or via SSH.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="connect_using_ipv6_link_local">Connect using IPv6 link local</h3>
+<div class="paragraph">
+<p>In case neither the <a href="en_connecting_nodes.html">normal connection procedure</a> to <a href="http://thisnode.info" class="bare">http://thisnode.info</a> nor the gateway IPv4 (as explained in <em>Connect using gateway IPv4</em>) are working for connecting to your node, you can use <em>IPv6 link local</em>.</p>
+</div>
+<div class="paragraph">
+<p>This works even if no IPv4 was received from the gateway, as checked in section "Verify the IPv4 connection". Likely this works only on Linux, maybe also on Macintosh.</p>
+</div>
+<div class="paragraph">
+<p>Each working network interface in your Linux system have a special IPv6 address configured automatically by the Kernel.
+These are named IPv6 link-local and are inside the special prefix fe80::/10
+The scope of these IPs is to communicate computers which are in the same collision domain, so translated to LibreMesh it would be the layer2 cloud.</p>
+</div>
+<div class="paragraph">
+<p>If on Linux you use NetworkManager, you may create a custom profile to avoid its intervention on the ethernet interface without having to stop it:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Right click the NetworkManager applet</p>
+</li>
+<li>
+<p>Edit connections &#8594; Add &#8594; Select <em>Ethernet</em></p>
+</li>
+<li>
+<p>Give it any name you desire, such as <em>eth0 manual</em></p>
+</li>
+<li>
+<p>General tab: deselect <em>Automatic connect</em></p>
+</li>
+<li>
+<p>IPv4 tab: select <em>Disabled</em></p>
+</li>
+<li>
+<p>IPv6 tab: select <em>Link-Local only</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Finally switch on your router and connect to it using an ethernet cable from its LAN port (WAN should also work) to the ethernet port of your computer, and select the new NetworkManager profile <em>eth0 manual</em>.</p>
+</div>
+<div class="paragraph">
+<p>An alternative to create a NetworkManager profile is to stop it with <code>sudo systemctl stop NetworkManager.service</code> and bring up the network interface manually with <code>sudo ip link set dev eth0 up</code> (<code>eth0</code> could be named differently, check with <code>ip link show</code>).</p>
+</div>
+<div class="paragraph">
+<p>Then, how to discover the <em>IPv6 link local</em> address of the router we&#8217;re connected to?</p>
+</div>
+<div class="paragraph">
+<p>Using ICMPv6 we can discover machines in our network thanks to the special Multicast address "ff02::".
+To discover all the devices we can use the next command (using <code>ping6</code> or <code>ping</code> depending on your Linux distro) where the appended %eth0 specifies which network interface to use (could be something like <code>eth0</code> or <code>enp0s25</code>, you can see the interface names with the commands <code>ip link show</code> or <code>ifconfig</code>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ping6 ff02::1%eth0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or just</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ping ff02::1%eth0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then each device connected to our collision domain, will reply the ICMP request with its own IPv6 link-local address.</p>
+</div>
+<div class="paragraph">
+<p>The first answer to each ping usually is <strong>your own ethernet interface</strong> (you can see your own IPv6 link local address with <code>ip -6 address show scope link</code>) while the ones marked with <em>DUP!</em> are the connected devices, the first one is the fastest to answer, so the one you&#8217;re directly connected to. You can more or less recognize the routers IPv6 link local addresses comparing them with the final part of their physical MAC address (printed on the router label), which should be similar.</p>
+</div>
+<div class="paragraph">
+<p>The router direction is a combination of the router&#8217;s IPv6 address, <code>%</code>, and your ethernet interface name. It should be something like <code>fe90::aa20:66ff:fe4f:ae87%eth0</code>. Do not include a trailing <code>:</code> or other text from the ping responses.</p>
+</div>
+<div class="paragraph">
+<p>Now that you have the target IPv6 link local you can connect to the router:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Try connecting via ssh: <code>ssh root@fe90::aa20:66ff:fe4f:ae87%eth0</code>. Remember to include both <code>root@</code>, otherwise it will attempt to connect using your personal username, and <code>%eth0</code> (or whatever is the name of the interface you used for connecting, you can see all interface names with <code>ip link show</code>).</p>
+</li>
+<li>
+<p>If there&#8217;s not yet a root password set on the router and the password access was not disabled by the network-profile, a blank password access is granted.</p>
+</li>
+<li>
+<p>Otherwise try all the router root passwords you remember.</p>
+</li>
+<li>
+<p>If neither work, and you already tried with all the other methods, likely you will have to reflash your router (e.g. using TFTP) or to reset using OpenWrt failsafe mode (this last procedure could ask for the password anyway if this was set in the network-profile during compilation of the installation image).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If you managed to connect via ssh you can also copy files on the router using IPv6 link local and <code>scp</code> (for copying big files like firmware images use the <code>/tmp</code> directory as a destination):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>scp LiMe-fw-sysupgrade.bin root@\[fe80::a2f3:c1ff:fe39:1cea%eth0\]:/tmp/</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You could get an error like this:</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>ash: /usr/libexec/sftp-server: not found
+scp: Connection closed
+---</p>
+</div>
+<div class="paragraph">
+<p>In this case, you just have to add a <code>-O</code> option to the ssh command, like this:</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>scp -O LiMe-fw-sysupgrade.bin root@\[fe80::a2f3:c1ff:fe39:1cea%eth0\]:/tmp/
+---</p>
+</div>
+<div class="paragraph">
+<p>for more details, <a href="https://github.com/openwrt/openwrt/issues/9889">see here</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="disc6">Click here</a> for downloading Pau&#8217;s script which check if there is some router attached to your network device and in case, try to connect to it.
+If there are not routers it waits until some appears.</p>
+</div>
+<div class="paragraph">
+<p>An example of execution:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>p4u@nomada:~$ ./disc6 eth1</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="still_no_access_possible_e_g_access_password_lost">Still no access possible (e.g. access password lost)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>If you tried all the instructions above without success, we suggest to ask for help</strong> via our <a href="../communication.html">contacts</a> before trying anything else.</p>
+</div>
+<div class="paragraph">
+<p>These situations of non-responsivity can arise from bad manual configurations and customizations (network-profile) or bad images being flashed or incompatible router model.</p>
+</div>
+<div class="paragraph">
+<p>If you feel confident enough, you can try to boot your router in OpenWrt failsafe mode or to re-flash it using low level procedures e.g. TFTP (if available) or serial connection (risky) or other recovery procedures you can find on <a href="https://openwrt.org/toh/start">your router&#8217;s specific page</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="recover_from_bad_configurations_with_failsafe_mode">Recover from bad configurations with Failsafe mode</h3>
+<div class="paragraph">
+<p>Failsafe mode enables you to recover from bad configurations without much trouble. Learn how to access Failsafe mode <a href="https://openwrt.org/docs/guide-user/troubleshooting/failsafe_and_factory_reset">here</a> or on the specific router page in <a href="https://openwrt.org/toh/start">OpenWrt table of hardware</a>. If you&#8217;re trying to reset the router after forgetting the password, this procedure could ask for the password anyway in case this was set in the network-profile during compilation of the installation image.</p>
+</div>
+<div class="paragraph">
+<p>The generic procedure is to start pressing repeatedly the router reset button during the boot, the LEDs should start blinking and failsafe mode activated instead of normal boot.</p>
+</div>
+<div class="paragraph">
+<p>Once in failsafe, connect by ethernet cable or by wireless to the router and try to connect to it as if was a freshly flashed LibreMesh router as explained in the <a href="en_connecting_nodes.html">connection procedure</a> on this site. If that does not work, try connecting to 192.168.1.1 or 10.13.0.1 (the IP could be even different if you flashed an image compiled with the preset configuration from your community) inserting the <a href="http://192.168.1.1" class="bare">http://192.168.1.1</a> or <a href="http://10.13.0.1" class="bare">http://10.13.0.1</a> direction in the URL bar of the browser or via SSH:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ssh root@192.168.1.1
+ssh root@10.13.0.1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If an error like <code>Unable to connect</code> or <code>No route to host</code> is obtained, likely you will have to set an IP for your computer, for example 192.168.1.2 or 10.13.0.2, before attempting to connect again. For setting an IP to your computer under Windows follow <a href="https://www.howtogeek.com/howto/19249/how-to-assign-a-static-ip-address-in-xp-vista-or-windows-7/">this guide</a>, under Mac <a href="https://www.howtogeek.com/howto/22161/how-to-set-up-a-static-ip-in-mac-os-x/">this guide</a>, under Linux <a href="https://www.linuxhint.com/change-from-dhcp-to-static-ip-address-ubuntu/">this guide</a> and under Android <a href="http://tunecomp.net/static-ip-android/">this guide</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you still cannot connect, make sure you are pressing the reset button at the right time, as explained <a href="https://openwrt.org/docs/guide-user/troubleshooting/failsafe_and_factory_reset">in this guide</a>. Then, if the problem persists, it&#8217;s likely that the IP is the one customized by your community (e.g. 10.XXX.0.1) so you can ask any member of your community or find it following the instructions above.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="re_flashing_via_tftp">Re-flashing via TFTP</h3>
+<div class="paragraph">
+<p>When the aforementioned connection procedures don&#8217;t work and Failsafe mode doesn&#8217;t help, likely we will have to reinstall a firmware image. As the normal way to reinstall, explained in <a href="en_quick_starting_guide.html">Quick Starting Guide</a> likely is not going to work, we can try communicating directly with the router bootloader. The bootloader is a tiny piece of software that never gets modified when flashing OpenWrt/LibreMesh and includes recovery functions. Usually it includes a TFTP (Trivial File Transfer Protocol) service, either server (e.g. on Ubiquiti routers) or client (e.g. on TP-Link routers), which can be activated keeping the reset button pressed for 10 seconds while plugging the router power cord (in Ubiquiti routers the success of this operation is confirmed by a nice blinking pattern of the LEDs) or is active for a short time after plugging the router (in some old Linksys routers). For specific instructions about how to activate the TFTP server or client in each router refer to <a href="https://openwrt.org/toh/start">OpenWrt table of hardware</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="procedure_for_routers_with_a_tftp_server">Procedure for routers with a TFTP server</h4>
+<div class="paragraph">
+<p>Always read the <a href="https://openwrt.org/toh/start">OpenWrt table of hardware</a> before attempting this procedure.</p>
+</div>
+<div class="paragraph">
+<p>To prepare for a TFTP flashing procedure:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>install a TFTP client on your PC, on Linux distros usually the package is named <code>tftp-hpa</code>;</p>
+</li>
+<li>
+<p>connect your PC via an ethernet cable to a LAN ethernet port on the unpowered router;</p>
+</li>
+<li>
+<p>use the connection manager of your PC to disconnect from any interface other than ethernet cable (e.g. wireless);</p>
+</li>
+<li>
+<p>set up a profile for the ethernet interface with a manual IPv4, suggested configurations are IPv4 <code>192.168.1.2</code>, netmask <code>24</code>, broadcast domain <code>255.255.255.0</code>, gateway (not really needed) <code>192.168.1.1</code>;</p>
+</li>
+<li>
+<p>open a terminal and using the command <code>cd</code> enter the directory where you downloaded the image to flash;</p>
+</li>
+<li>
+<p>issue the command <code>tftp 192.168.1.1</code> which will open TFTP for connecting to 192.168.1.1 that is the most common router IP address in TFTP recovery mode;</p>
+</li>
+<li>
+<p>in tftp execute the commands <code>binary</code> that sets the mode of transfer, <code>trace on</code> which enables a clearer output, <code>rexmt 1</code> which specifies the retransmission timeout, <code>timeout 60</code> which sets the total transmission timeout;</p>
+</li>
+<li>
+<p>then enable the TFTP recovery mode in your router, depending on the specific model procedure;</p>
+</li>
+<li>
+<p>execute in TFTP the command <code>put &lt;place here the name of the file -factory.bin&gt;</code>;</p>
+</li>
+<li>
+<p>the output should be a long list of chunks being transferred;</p>
+</li>
+<li>
+<p>wait 5 minutes for the flashing to be complete and reboot the router.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We recommend to follow these instructions only after verifying the goodness of it for the specific device to recover.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="procedure_for_routers_with_a_tftp_client">Procedure for routers with a TFTP client</h4>
+<div class="paragraph">
+<p>In this case, the procedure can change by a wider extent so that the router-specific instructions need to be followed as reported on <a href="https://openwrt.org/toh/start">OpenWrt table of hardware</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="serial_connection">Serial connection</h3>
+<div class="paragraph">
+<p>Recovery through serial connection can be completely different from router to router and highly esoteric. A lot of digging into any form of human knowledge is suggested before attempting to recover a router this way.</p>
+</div>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>Last updated 2023-04-01 14:06:29</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>

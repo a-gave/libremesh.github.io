@@ -1,0 +1,495 @@
+<!doctype html>
+
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html lang="en" class="no-js" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Change Ethernet config</title>
+
+
+    <meta name="description"
+          content="The LibreMesh project, a set of tools for making the free networks possible"/>
+	
+    <link rel="stylesheet" href="/css/foundation.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/coderay.css"/>
+    <link rel="stylesheet" href="/css/asciidoctor.css"/>
+    <link rel="stylesheet" href="/css/lime.css"/>
+    <script src="/js/vendor/modernizr.js"></script>
+    <script src="/js/toc.js"></script>
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">
+                    <img src="/logo/logo_nano.png"></img>
+                    <span class="top-bar-title">LibreMesh</span>
+                </a>
+            </h1>
+        </li>
+	<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+    </ul>
+    
+<!-- lang --> 
+<ul class="lng">
+
+
+
+
+
+  <li>
+    <a href="/docs/en_changing_network_behavior.html" class="en">en</a>
+  </li>
+
+    </ul>
+<!-- fine lang-->
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/">Home</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/news.html">News</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/communication.html">Communication</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/getit.html">Get it!</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/howitworks.html">How it works</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/development.html">Development</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/docs/">Documentation</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/about.html">About</a></li>
+
+
+        </ul>
+    </section>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+    <!-- Docs Sidebar -->
+
+    
+    <aside class="large-3 columns">
+        <h4>Documentation</h4>
+<div class="panel">
+    <div id="toc" class="toc">
+        <ul class="sectlevel0">
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/"> Documentation</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-rocket" aria-hidden="true"></i><a href="/docs/en_quick_starting_guide.html"> Quick Starting Guide</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-hand-o-right" aria-hidden="true"></i><a href="/docs/en_connecting_nodes.html"> Connecting to LibreMesh nodes</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-cogs" aria-hidden="true"></i><a href="/docs/en_config.html"> Configuration</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li  class="active"><i class="fa fa-plug" aria-hidden="true"></i><a href="/docs/en_changing_network_behavior.html"> Change Ethernet config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wifi" aria-hidden="true"></i><a href="/docs/en_change_wifi_behavior.html"> Change WiFi config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/hardware/"> Hardware</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wrench" aria-hidden="true"></i><a href="/docs/en_troubleshooting.html"> Troubleshooting</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+    </aside>
+    
+
+    <!-- End Docs Sidebar -->
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sectionbody ">
+            
+            <div class="paragraph text-right">
+                <p><span class="icon"><i class="fa fa-plus-square"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/new/master/docs">Create new page</a>
+                </p>
+            </div>
+            
+            <div class="paragraph text-right">
+                <p>
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/edit/master/docs/en_changing_network_behavior.txt">Edit this page</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="sect1">
+<h2 id="wan_port_configuration">WAN port configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The recommended <code>lime-hwd-openwrt-wan</code> package detects the WAN port and configures it for getting connectivity to the internet.</p>
+</div>
+<div class="sect2">
+<h3 id="connecting_via_ssh_also_from_the_wan_port">Connecting via SSH also from the WAN port</h3>
+<div class="paragraph">
+<p>If the OpenWrt&#8217;s firewall is present, it will block incoming connections on the WAN port, for security reasons.
+If you need to connect via SSH from the WAN port (likely from the internet), you can allow the incoming connection to the port 22 (the default port for SSH) adding these lines in <code>/etc/config/firewall</code> and rebooting your router:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>config rule
+	option name 'Allow-SSH'
+	option src 'wan'
+	option proto 'tcp'
+	option dest_port '22'
+	option target 'ACCEPT'</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using_the_wan_port_for_connecting_with_another_cloud">Using the WAN port for connecting with another cloud</h3>
+<div class="paragraph">
+<p>When two neighboring LibreMesh networks want to interconnect without flooding each other with local broadcast traffic, they use two different WiFi access point names <code>ap_name</code>. But if they want to do the same via cable, they can do so with a WAN-WAN connection, connecting two border nodes via their WAN ports. This is absolutely not the intended use for a WAN port but works.</p>
+</div>
+<div class="paragraph">
+<p>Important: if you have the OpenWrt firewall installed, you will need to allow all the incoming connections on the WAN port of both border routers. For doing this, edit the <code>/etc/config/firewall</code> file like this and reboot your routers:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>config zone
+	option name		wan
+	list   network		'wan'
+	list   network		'wan6'
+	option input		REJECT --&gt; change to ACCEPT
+	option output		ACCEPT
+	option forward		REJECT --&gt; change to ACCEPT
+	option masq		1
+	option mtu_fix		1</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="libremesh_interface_specific_network_configuration">LibreMesh interface-specific network configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If no interface-specific network configuration is present, the general network configuration section is used for all the interfaces.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the general LibreMesh config file options see <a href="en_config.html">The config file</a> page.</p>
+</div>
+<div class="paragraph">
+<p>For more examples and offline documentation check out <code>/docs/lime-example.txt</code> or <a href="http://thisnode.info/docs/lime-example.txt" class="bare">http://thisnode.info/docs/lime-example.txt</a> on the router or <a href="https://github.com/libremesh/lime-packages/blob/master/packages/lime-docs/files/www/docs/lime-example.txt">lime-example file online</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="specific_ethernet_interface_configuration">Specific ethernet interface configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If we want to change the default behavior of just one network interface of the many that are present in a router, we can define a specific configuration.</p>
+</div>
+<div class="paragraph">
+<p>Please make sure to check out how OpenWrt names the physical ports of your router model, for this read the router page accessible from <a href="https://openwrt.org/toh/start">OpenWrt table of hardware</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Ethernet specific options, multiple allowed</div>
+<div class="content">
+<pre>config net port5
+	option linux_name 'eth1.5'
+	list protocols 'wan'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case the eth1.5 interface will be used as WAN (so the DHCP client will be enabled).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">config net</div>
+<div class="paragraph">
+<p>Do not put any "." in the section name (e.g. <em>port5</em>).</p>
+</div>
+<div class="paragraph">
+<p>As <code>linux_name</code>, use the actual name of the interface as the system shows (check with <code>ip link show</code>).</p>
+</div>
+<div class="paragraph">
+<p>Some of the available protocols require the relative package, for example <code>lime-proto-wan</code>, to be installed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Network interface specific options</div>
+<div class="paragraph">
+<p>Available protocols: bmx6, bmx7, batadv, olsr, olsr6, olsr2, bgp, wan, lan, manual, static, babeld, apbb, client</p>
+</div>
+<div class="paragraph">
+<p>Note that some of these protocols will require the relative <code>lime-proto-...</code> package being installed, otherwise the protocol entry will be ignored.</p>
+</div>
+<div class="paragraph">
+<p>proto:vlan_number works too (something like bmx6:13 is supported). If VLAN is 0, no VLAN will be used.</p>
+</div>
+<div class="paragraph">
+<p>VLAN type defaults to 802.1ad, but it can be set to 80.1q adding another option <code>proto:vlan_number:8021q</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you use manual do not specify other protocols, may result in an unpredictable behavior/configuration.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">WAN autoconfiguration</div>
+<div class="paragraph">
+<p>If the LibreMesh package <code>lime-hwd-openwrt-wan</code> is installed and your node have two or more ethernet ports,
+LibreMesh might autoconfigure as WAN one of these network ethernet device.</p>
+</div>
+<div class="paragraph">
+<p>In this case you will find a new specific configuration section like this one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>config net 'lm_hwd_openwrt_wan'
+	option autogenerated 'true'
+	...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we want to change the behavior of this specific network interface and stop the automatic rewrite of its configuration, we must set the <code>autogenerated</code> option to <code>false</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ground_routing_configuration">Ground routing configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For more information on ground routing concept, check out <a href="https://github.com/libremesh/lime-packages/issues/443">these resources</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Ground routing specific sections</div>
+<div class="content">
+<pre>config hwd_gr link1
+	option net_dev 'eth0'
+	option vlan '5'
+	option switch_dev 'switch0'
+	option switch_cpu_port '0'
+	list switch_ports '4'</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">config hwd_gr</div>
+<div class="ulist">
+<ul>
+<li>
+<p>net_dev: Plain ethernet device on top of which 802.1q VLAN will be constructed.</p>
+</li>
+<li>
+<p>vlan: VLAN ID to use for this ground routing link, use little one because cheap switch doesn&#8217;t supports big IDs, this will be used also as 802.1q VID.</p>
+</li>
+<li>
+<p>switch_dev: These options regarding switch need to be set only if your ethernet device is connected to a switch chip. If the switch exists you can read its name (like switch0) in <code>/etc/config/network</code> file.</p>
+</li>
+<li>
+<p>switch_cpu_port: Refer to switch port map of your device on <a href="https://openwrt.org/toh/start">OpenWrt ToH</a> to know CPU port index.</p>
+</li>
+<li>
+<p>switch_ports: List switch ports on which you want the VLAN being passed, refer to <a href="https://openwrt.org/toh/start">OpenWrt ToH</a> for correspondence with physical ports.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>One section for each ground routing link.
+With ground routing we mean setups having LibreMesh on a router which is connected via cable(s), eventually through a switch, to some wireless routers running the original firmware in WDS (transparent bridge) Ap/Sta mode.
+Likely you want to configure as many sections of ground routing with different VLAN numbers or different switch ports as many connected devices in WDS mode.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bgp_configuration">BGP configuration</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">Proto BGP specific sections (one section for each BGP peer)</div>
+<div class="content">
+<pre>config bgp_peer peer1
+	option remoteIP '192.0.2.6'
+	option remoteAS '65550'
+
+config bgp_peer peer2
+	option remoteIP '2001:db8::c001'
+	option remoteAS '65549'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For documentation on BGP configuration see <a href="http://nicolasacco.diveni.re/~gio/internship-report/main.html#proto:bgp">this thesis</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="specific_wireless_interface_configuration">Specific wireless interface configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="en_change_wifi_behavior.html">Change WiFi behavior</a> page.</p>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>Last updated 2023-04-01 14:06:29</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>

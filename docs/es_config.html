@@ -1,0 +1,784 @@
+<!doctype html>
+
+<!--[if IE 9]>
+<html class="lt-ie10" lang="es"> <![endif]-->
+<html lang="es" class="no-js" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Configuración</title>
+
+
+    <meta name="description"
+          content="The LibreMesh project, a set of tools for making the free networks possible"/>
+	
+    <link rel="stylesheet" href="/css/foundation.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/coderay.css"/>
+    <link rel="stylesheet" href="/css/asciidoctor.css"/>
+    <link rel="stylesheet" href="/css/lime.css"/>
+    <script src="/js/vendor/modernizr.js"></script>
+    <script src="/js/toc.js"></script>
+
+</head>
+<body>
+
+
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+            <h1>
+                <a href="">
+                    <img src="/logo/logo_nano.png"></img>
+                    <span class="top-bar-title">LibreMesh</span>
+                </a>
+            </h1>
+        </li>
+	<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+    </ul>
+    
+<!-- lang --> 
+<ul class="lng">
+
+
+
+
+
+  <li>
+    <a href="/docs/en_config.html" class="en">en</a>
+  </li>
+
+  <li>
+    <a href="/docs/es_config.html" class="es">es</a>
+  </li>
+
+    </ul>
+<!-- fine lang-->
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/es_index.html">Inicio</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/news.html">News</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/communication.html">Communication</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/es_getit.html">¡Obtener!</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/es_howitworks.html">Cómo Funciona</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/es_development.html">Desarrollo</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/docs/es_index.html">Documentación</a></li>
+
+    <!-- Use the current language and default to english if doc translation is not found -->
+    
+    
+    
+    <li ><a href="/about.html">About</a></li>
+
+
+        </ul>
+    </section>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+    <!-- Docs Sidebar -->
+
+    
+    <aside class="large-3 columns">
+        <h4>Documentation</h4>
+<div class="panel">
+    <div id="toc" class="toc">
+        <ul class="sectlevel0">
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/es_index.html"> Documentación</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-rocket" aria-hidden="true"></i><a href="/docs/en_quick_starting_guide.html"> Quick Starting Guide</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-hand-o-right" aria-hidden="true"></i><a href="/docs/en_connecting_nodes.html"> Connecting to LibreMesh nodes</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li  class="active"><i class="fa fa-cogs" aria-hidden="true"></i><a href="/docs/es_config.html"> Configuración</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-plug" aria-hidden="true"></i><a href="/docs/en_changing_network_behavior.html"> Change Ethernet config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wifi" aria-hidden="true"></i><a href="/docs/en_change_wifi_behavior.html"> Change WiFi config</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa " aria-hidden="true"></i><a href="/docs/hardware/"> Hardware</a></li>
+        
+            <!-- Use the current language and default to english if doc translation is not found -->
+            
+            
+            
+	    <li ><i class="fa fa-wrench" aria-hidden="true"></i><a href="/docs/en_troubleshooting.html"> Troubleshooting</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+    </aside>
+    
+
+    <!-- End Docs Sidebar -->
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <div class="sectionbody ">
+            
+            <div class="paragraph text-right">
+                <p><span class="icon"><i class="fa fa-plus-square"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/new/master/docs">Crear nueva página</a>
+                </p>
+            </div>
+            
+            <div class="paragraph text-right">
+                <p>
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                    <a href="https://github.com/libremesh/libremesh.github.io/edit/master/docs/es_config.txt">Editar esta página</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="sect1">
+<h2 id="introducción_a_la_configuración"><a class="anchor" href="#introducción_a_la_configuración"></a>Introducción a la configuración</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LibreMesh tiene un sistema de configuración basado en los siguienes principios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ser simple de configurar y entender qué configuraciones están en uso en cada nodo</p>
+</li>
+<li>
+<p>Basado en la idea de configuraciones compartidas a nivel Comunidad con customizaciones posibles por Nodo.</p>
+</li>
+<li>
+<p>Mantenible en el tiempo, por actualizaciones de firmware, agregar nuevos nodos en la comunidad, etc.</p>
+</li>
+<li>
+<p>Poder realizar configuraciones complejas.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>El sistema de configuración es fundamental para entender el funcionamiento interno de LibreMesh,
+sin embargo no es necesario entenderlo antes de empezar una red LibreMesh!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuración_geek_free_usando_el_firstbootwizard"><a class="anchor" href="#configuración_geek_free_usando_el_firstbootwizard"></a>Configuración geek free usando el FirstBootWizard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Si tu comunidad quiere desplegar una red geek free es recomendable hacerlo usando la lime-app
+utilizando el FirstBootWizard. Esta aplicación simplifica la configuración inicial de los nodos y
+permite a nuevos nodos sumarse a una red existente, todo a travez de una interfaz amigable
+que no requiere conocimientos previos de redes.</p>
+</div>
+<div class="paragraph">
+<p>Para utilzar el FirstBootWizard simplemente sigue los pasos que aparecen en pantalla al
+entrar en <a href="http://thisnode.info" class="bare">http://thisnode.info</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/img/firstbootwizard-splash.png" alt="FirstBootWizard splash"></span></p>
+</div>
+<div class="paragraph">
+<p>En cambio si tu comunidad es una comunidad de geeks entonces quizas no quieran utilizar el FirstBootWizard.</p>
+</div>
+<div class="paragraph">
+<p>Una vez iniciada la red utilizando el FBW les participantes pueden realizar algunos
+cambios de configuración a travez de la lime-app.
+A medida que vayan surgiendo necesidades en la comunidad que no se cubran actualmente con la
+lime-app les participantes de la red podrán aprender a realizar estos cambios a travez de <code>ssh</code>
+u otras herramientas y siguiendo la documentación a continuación.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuración_para_administradores_de_red"><a class="anchor" href="#configuración_para_administradores_de_red"></a>Configuración para administradores de red</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LibreMesh utiliza a <a href="https://openwrt.org/docs/guide-user/base-system/uci">UCI</a> como sistema de
+configuración ya que UCI es tambien es utilizado por OpenWrt.
+<a href="https://openwrt.org/docs/guide-user/base-system/uci">UCI</a> es una base de datos de que es
+facilmente modificable tanto desde línea de comandos como editando los archivos de configuración directamente.
+Todos los archivos de configuración de UCI se encuentran en el directorio <code>/etc/config/</code>.
+Los archivos de configuración de LibreMesh que pueden ser editados para son: <code>/etc/config/lime-node</code> y
+<code>/etc/config/lime-community</code>.
+El resto de los archivos de configuración no deben ser modificados.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="niveles_de_configuración_comunidad_y_nodo"><a class="anchor" href="#niveles_de_configuración_comunidad_y_nodo"></a>Niveles de configuración <strong><em>Comunidad</em></strong> y <strong><em>Nodo</em></strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Para ayudar a la comunidad a mantener sus configuraciones, la configuración de los nodos de la red
+se estructura jerarquicamente en 3 niveles:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong><em>Nodo</em></strong>, archivo <code>/etc/config/lime-node</code></p>
+</li>
+<li>
+<p><strong><em>Comunidad</em></strong>, archivo <code>/etc/config/lime-community</code></p>
+</li>
+<li>
+<p><strong><em>Defecto</em></strong>, archivo <code>/etc/config/lime-defaults</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Donde la configuración realizada a nivel de <strong><em>Nodo</em></strong> toma prioridad por sobre <strong><em>Comunidad</em></strong> y esta  a su
+vez tiene prioridad por sobre el <strong><em>Defecto</em></strong>.
+De esta forma cuando la mayoria de los nodos comparten cierta caracteristica la misma conviene
+configurarse a nivel comunidad y solo modificarla en el nivel de <strong><em>Nodo</em></strong> en los nodos donde esa configuración difiere.
+El nivel <strong><em>Default</em></strong> contiene todos los valores de configuración en su valor por defecto.</p>
+</div>
+<div class="sect2">
+<h3 id="ejemplo"><a class="anchor" href="#ejemplo"></a>Ejemplo</h3>
+<div class="paragraph">
+<p>Supongamos que queremos configurar la distancia máxima wireless de los nodos de 2.4GHz de la comunidad
+en 300 metros pero en dos de los nodos A y B configurarla en 1000m. Lo podríamos hacer de la siguiente forma:</p>
+</div>
+<div class="paragraph">
+<p>En <code>lime-community</code> de todos los nodos tendriamos:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="python">config lime <span class="string"><span class="delimiter">'</span><span class="content">wifi</span><span class="delimiter">'</span></span>
+        <span class="comment"># other options</span>
+        option distance_2ghz <span class="string"><span class="delimiter">'</span><span class="content">300</span><span class="delimiter">'</span></span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Y en los archivos <code>lime-node</code> de los nodos A y B:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="python">config lime <span class="string"><span class="delimiter">'</span><span class="content">wifi</span><span class="delimiter">'</span></span>
+        option distance_2ghz <span class="string"><span class="delimiter">'</span><span class="content">1000</span><span class="delimiter">'</span></span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="funcionamiento"><a class="anchor" href="#funcionamiento"></a>Funcionamiento</h3>
+<div class="paragraph">
+<p>Al correr el comando <code>lime-config</code> lo primero que sucede es que se procesan los niveles <strong><em>Nodo</em></strong>,
+<strong><em>Comunidad</em></strong> y <strong><em>Default</em></strong> y se genera el archivo <code>/etc/config/lime-autogen</code>.
+Este archivo es el que contiene la configuración que realmente va a utilizarse por libremesh para configurar el sistema.</p>
+</div>
+<div class="paragraph">
+<p>Luego se escriben los archivos de configuración resultantes para cada paquete en base a <code>/etc/config/lime-autogen</code>
+Para que las configuraciones se apliquen, es recomendable correr <code>reboot</code> luego de <code>lime-config</code>. Si bien hay formas más rápidas
+de aplicar las modificaciones en ciertos casos, correr <code>reboot</code> es la única que asegura que todos los cambios se aplicaron.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="lista_de_secciones_y_opciones"><a class="anchor" href="#lista_de_secciones_y_opciones"></a>Lista de secciones y opciones</h3>
+<div class="paragraph">
+<p>La configuración se divide en tres secciones principales: <code>system</code>, <code>network</code> y <code>wifi</code>.</p>
+</div>
+<div class="paragraph">
+<p>Para tener información detallada y actualizada de todas las opciones ver la referencia actualizada
+en <a href="https://github.com/libremesh/lime-packages/blob/master/packages/lime-docs/files/www/docs/lime-example.txt">/docs/lime-example</a>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Opciones de sistema</div>
+<p>Las siguientes opciones de la seccion <code>system</code> son las más relevantes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>config lime system
+	option hostname 'LiMe-%M4%M5%M6'
+	option domain 'thisnode.info'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Te sugerimos que cambies el dominio <code>thisnode.info</code> a un nuevo <strong>subdominio</strong> del sitio de tu comunidad, por ejemplo <code>option domain <em>mesh.altermundi.net</em></code>. Este dominio (<em>mesh.altermundi.net</em>) debe ser un dominio que no exista ya afuera de la red (i.e. es una mala idea usar <em>altermundi.net</em>). A todos los clientes que obtienen una dirección IP por DHCP y a todos los nodos de la red se le asignará un <strong>fully qualified domain</strong> (ej. <em>lime-ddeeff.mesh.altermundi.net</em>)</p>
+</div>
+<div class="paragraph">
+<div class="title">Configuraciones generales de red</div>
+<p>De todas las opciones de red las más relevantes son las siguientes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>config lime network
+	option primary_interface 'eth0'
+	option main_ipv4_address '10.%N1.0.0/16'
+	option main_ipv6_address '2a00:1508:0a%N1:%N200::/64'
+	list protocols ieee80211s
+	list protocols lan
+	list protocols anygw
+	list protocols batadv:%N1</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Configuración IPv4: <code>main_ipv4_address</code></div>
+<div class="paragraph">
+<p>Hay cuatro posibilidades:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>configurar una IP y subnet estática, por ejemplo <code>'192.0.2.1/16'</code></p>
+</li>
+<li>
+<p>parametrizar con <code>%Mn</code> y <code>%Nn</code>, y configurar la subnet, por ejemplo <code>'192.%N1.%M5.%M6/16'</code></p>
+</li>
+<li>
+<p>configurar un dirección de red (no una IP en especifico) para obtener una IP autocompletada
+dentro de la red a partir de los bits de la MAC. Esto tambien funciona con máscaras distintas de
+<code>/24</code> or <code>/16</code> como <code>'192.0.128.0/17'</code></p>
+</li>
+<li>
+<p>configurar dos parámetros distintos, el primero para la subnet y el segundo para la parametrización de la IP,
+por ejemplo <code>'192.0.128.0/16/17'</code>, resultando en una subnet <code>/16</code>  con dominio de broadcast (<code>192.0.0.0/16</code>) pero con la IP del nodo
+calculada en un rango <code>/17</code> (desde la <code>192.0.128.0</code> a la <code>192.0.255.254</code>).</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Configuración IPv6: <code>main_ipv6_address</code></div>
+<div class="paragraph">
+<p>La configuración es similar a la <code>main_ipv4_address</code>. Si se usa autocompletado como máximo se completan
+los ultimos 24 bits, por lo que en este caso no es útil usar un rango mayor a <code>/104</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Lista de protocolos: <code>list protocols</code></div>
+<div class="paragraph">
+<p>Listado de protocolos configurados por LibreMesh. Algunos de estos require la instalación de su paquete relacionado <code>lime-proto-...</code>.
+Notar que por como funcionan las <code>list</code> (listas de UCI) configurar algunos protocolos hace que se reescriba la lista
+completa de protocolos que está en los valores por <strong><em>Defecto</em></strong>.
+No te preocupes si hay mas protocolos definidos que los que realmente necesitas: solamente los protocolos correspondientes a los
+paquetes instalados se van a utilizar. Entonces por ejemplo si el paquete <code>lime-proto-olsr</code> no está instalado entonces por mas
+que en la lista esté el protocolo <code>olsr</code> el mismo no será usado.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Configuraciones generales WiFi</div>
+<p>De todas las opciones de red las más relevantes son las siguientes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>config lime wifi
+	option channel_2ghz '11'
+	list channel_5ghz '48'
+	list channel_5ghz '157'
+	option distance_2ghz '100'
+	option distance_5ghz '1000'
+	list modes 'ap'
+	list modes 'apname'
+	list modes 'ieee80211s'
+	option ap_ssid 'LibreMesh.org'
+	option apname_ssid 'LibreMesh.org/%H'
+    option country 'ES'</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Configuración de país: <code>country code</code></div>
+<div class="paragraph">
+<p>El código de país por defecto no viene especificado (entonces por lo tanto el defecto suele ser <code>US</code>),
+pero recomendamos encarecidamente que lo configuren. Si la red se encuentra en España entonces la configuración es
+<code>option country 'ES'</code>, lo que además permite el uso del canal 13 (permitido en España) que de otra forma está restringido.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">distance</div>
+<div class="paragraph">
+<p>El parámetro <code>distance</code> indica la máxima distancia a la que pueden estar los otros nodos o clientes.
+Un valor muy grande disminuye el rendimiento pero un valor inferior al necesario resulta en una
+conección con un rendimiento muy muy malo (suelen verse paquetes duplicados (DUPs) al hacer ping).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">wifi options</div>
+<div class="paragraph">
+<p>Cualquier opción en la forma <code>&lt;mode&gt;_&lt;option&gt;</code> se copia directamente a <code>/etc/config/wireless</code> (sin el prefijo <code>&lt;mode&gt;_</code>).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">wifi Password de puntos de acceso</div>
+<div class="paragraph">
+<p>Para segurizar con WPA2-PSK las interfaces AP y APname, agrega las opciones <code>key 'MiPasswordSeguro'</code>
+y <code>encryption 'psk2'</code>. Para un ejemplo ver en <a href="https://github.com/libremesh/lime-packages/blob/master/packages/lime-docs/files/www/docs/lime-example.txt">/docs/lime-example</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configuraciones_de_interfaz_especificas"><a class="anchor" href="#configuraciones_de_interfaz_especificas"></a>Configuraciones de interfaz especificas</h3>
+<div class="paragraph">
+<p>Cambiar las opciones antes mencionadas nos permite tener una configuración de todo el sistema.</p>
+</div>
+<div class="paragraph">
+<p>En los casos en los que diferentes interfaces de red deben tener configuraciones diferentes, véase <a href="https://github.com/libremesh/lime-packages/blob/master/packages/lime-docs/files/www/docs/lime-example.txt">/docs/lime-example</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="opciones_parametrizables"><a class="anchor" href="#opciones_parametrizables"></a>Opciones parametrizables</h3>
+<div class="paragraph">
+<p>Algunas opciones son parametrizables usando un conjunto de caracteres especiales que serán
+reemplazados por información específica del nodo.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>MAC bytes</strong> <code>%Mn</code> se refiere a el byte <code>n</code> de la dirección de MAC de la interfaz principal.
+Por ejemplo de la MAC <code>CA:FF:EE:BA:BB:EE</code> <code>%M1</code> se reemplazará por <code>CA</code>  (el prime byte de la MAC)
+y <code>%M4</code>  por <code>BA</code> (el cuarto byte de la MAC).</p>
+</li>
+<li>
+<p><strong>Network Identifier</strong> <code>%Nn</code> refiere al byte <code>n</code> del identificador de la nube que es un hash que se calcula
+a partir del SSID del AP (tomado del contenido de <code>option ap_ssid ...</code>).</p>
+</li>
+<li>
+<p><strong>Hostname</strong> <code>%H</code> se refiere al hostname del nodo.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configurando_cosas_no_previstas_en_libremesh"><a class="anchor" href="#configurando_cosas_no_previstas_en_libremesh"></a>Configurando cosas no previstas en LibreMesh</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Si se quiere realizar una configuración para la cual LibreMesh no tiene una opción entonces
+es necesario usar <strong><em>configuraciones genéricas</em></strong> y <strong><em>lime-assets</em></strong>.</p>
+</div>
+<div class="sect2">
+<h3 id="generic-configs"><a class="anchor" href="#generic-configs"></a>Configuraciones genéricas: <code>generic_uci_config</code></h3>
+<div class="paragraph">
+<p>Se puede configurar otros archivos en <code>/etc/config/</code> desde los archivos de configuración de lime usando
+configuraciones genéricas.</p>
+</div>
+<div class="paragraph">
+<p>Ejemplo para configurar la localización de <code>/etc/config/libremap</code> desde <code>/etc/config/lime-community</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="python"> config generic_uci_config libremap
+    <span class="predefined">list</span> uci_set <span class="string"><span class="delimiter">&quot;</span><span class="content">libremap.settings=libremap</span><span class="delimiter">&quot;</span></span>
+    <span class="predefined">list</span> uci_set <span class="string"><span class="delimiter">&quot;</span><span class="content">libremap.settings.community=our.libre.org</span><span class="delimiter">&quot;</span></span>
+    <span class="predefined">list</span> uci_set <span class="string"><span class="delimiter">&quot;</span><span class="content">libremap.settings.community_lat=-200.123</span><span class="delimiter">&quot;</span></span>
+    <span class="predefined">list</span> uci_set <span class="string"><span class="delimiter">&quot;</span><span class="content">libremap.settings.community_lon=500.9</span><span class="delimiter">&quot;</span></span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="lime-assets"><a class="anchor" href="#lime-assets"></a>Los <strong><em>lime-assets</em></strong>, archivos para configuraciones especiales</h3>
+<div class="paragraph">
+<p>Los <strong><em>lime-assets</em></strong> son archivos que permiten realizar configuraciones especiales. Estos archivos
+se dividen en dos grupos, los del nodo y los de la comunidad. La idea es que los assets de la comunidad
+sean compartidos por todos los nodos y permitan realizar configuraciones que son necesarias en todos los nodos.
+En cambio los archivos (<em>assets</em>) del nodo están pensados para realizar configuraciones especificas en el nodo.</p>
+</div>
+<div class="sect3">
+<h4 id="definiendo_archivos_copy_asset"><a class="anchor" href="#definiendo_archivos_copy_asset"></a>Definiendo archivos: <code>copy_asset</code></h4>
+<div class="paragraph">
+<p>Si se precisa que un archivo esté presente en el sistema de archivos puedes usar la directiva <code>copy_asset</code>.
+<code>copy_asset</code> copia un archivo desde el directorio de <em>assets</em> hacia una ruta definida por la opción <code>dst</code>.</p>
+</div>
+<div class="paragraph">
+<p>Por ejemplo para configurar el programa <code>collectd</code> para tu comunidad puedes crear un archivo <code>collectd.conf</code>
+en <code>/etc/lime-assets/community/collectd.conf</code> y usarlo definiendo la siguiente configuración en el archivo
+<code>lime-community</code> de la siguiente manera:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="python">config copy_asset collectd
+   option asset <span class="string"><span class="delimiter">'</span><span class="content">community/collectd.conf</span><span class="delimiter">'</span></span>
+   option dst <span class="string"><span class="delimiter">'</span><span class="content">/etc/collectd.conf</span><span class="delimiter">'</span></span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ejecutando_scripts_run_asset"><a class="anchor" href="#ejecutando_scripts_run_asset"></a>Ejecutando scripts: <code>run_asset</code></h4>
+<div class="paragraph">
+<p>Para configurar a LibreMesh para que se ejecute un script se debe usar  la opción <code>run_asset</code>.
+Usar este método de configuración como último recurso si los otros métodos no son suficientes.</p>
+</div>
+<div class="paragraph">
+<p><code>run_asset</code> ejecuta un script del directorio de assets. La ejecución puede ser en el primer booteo
+(o sea, cuando inicia luego de realizarse un upgrade de firmware) usando <code>ATFIRSTBOOT</code> o en cada
+vez que se reconfigura LibreMesh (cuando se ejecuta <code>lime-config</code>) usando <code>ATCONFIG</code>.</p>
+</div>
+<div class="paragraph">
+<p>Por ejemplo para ejecutar el script <code>myscript.sh</code> guardado en <code>/etc/lime-assets/community/myscript.sh</code>
+en el primer booteo:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="python"> config run_asset a_test_script
+     option asset <span class="string"><span class="delimiter">'</span><span class="content">community/myscript.sh</span><span class="delimiter">'</span></span>
+     option when <span class="string"><span class="delimiter">'</span><span class="content">ATFIRSTBOOT</span><span class="delimiter">'</span></span></code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Este método de configuración reemplaza la funcionalidad de los scripts <code>uci-defaults</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="importante"><a class="anchor" href="#importante"></a>Importante</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="no_editar_otros_archivos_de_configuración_que_no_sean_de_libremesh"><a class="anchor" href="#no_editar_otros_archivos_de_configuración_que_no_sean_de_libremesh"></a>No editar otros archivos de configuración que no sean de libremesh</h3>
+<div class="paragraph">
+<p>La configuración de un nodo libremesh solo debe realizarse a travez de los archivos de configuración de libremesh
+y nunca editando directamente los otros archivos de configuración.
+Esto es así ya que los cambios realizados en archivos de configuración por fuera del sistema de
+configuración de libremesh se pueden perder cuando:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>se realice un cambio en la configuración de libremesh</p>
+</li>
+<li>
+<p>se haga un upgrade de firmware</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="nunca_modificar_los_archivos_con_valores_por_defecto_ni_los_autogenerados"><a class="anchor" href="#nunca_modificar_los_archivos_con_valores_por_defecto_ni_los_autogenerados"></a>Nunca modificar los archivos con valores por defecto ni los <em>autogenerados</em></h3>
+<div class="paragraph">
+<p>A pesar de que podria ser cómodo modificar directamente <code>/etc/config/lime-defaults</code> o inclusive
+<code>/etc/config/lime-autogen</code> esto no debe hacerse ya que en el futuro cuando querramos entender
+la configuración que tenemos del nodo no vamos a poder distinguir si cambiamos una configuración o no.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="quiero_cambiar_una_opción_para_probar_dónde_la_cambio"><a class="anchor" href="#quiero_cambiar_una_opción_para_probar_dónde_la_cambio"></a>Quiero cambiar una opción para probar, dónde la cambio?</h3>
+<div class="paragraph">
+<p>En la configuración de <strong><em>Nodo</em></strong>: <code>/etc/config/lime-node</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tengo_que_configurar_todas_las_opciones"><a class="anchor" href="#tengo_que_configurar_todas_las_opciones"></a>Tengo que configurar todas las opciones?</h3>
+<div class="paragraph">
+<p>No, las configuraciones por del nivel <strong><em>Defecto</em></strong> proveen una configuración que permite tener una
+experiencia de red mesh sin tener que cambiar nada.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cómo_hago_para_ver_todas_las_opciones_estan_en_uso_actualmente_en_un_nodo"><a class="anchor" href="#cómo_hago_para_ver_todas_las_opciones_estan_en_uso_actualmente_en_un_nodo"></a>Cómo hago para ver todas las opciones estan en uso actualmente en un nodo?</h3>
+<div class="paragraph">
+<p>Ver el archivo <code>/etc/config/lime-autogen</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="quiero_cambiar_algo_pero_pero_no_encuentro_una_opcion_de_libremesh_para_realizarlo"><a class="anchor" href="#quiero_cambiar_algo_pero_pero_no_encuentro_una_opcion_de_libremesh_para_realizarlo"></a>Quiero cambiar algo pero pero no encuentro una opcion de libremesh para realizarlo</h3>
+<div class="paragraph">
+<p>Para eso existen las <a href="#generic-configs">Configuraciones genéricas</a> y los <a href="#lime-assets">lime-assets</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cómo_hago"><a class="anchor" href="#cómo_hago"></a>¿Cómo hago?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Cómo usar las configuraciones de ap, apnode, mesh</p>
+</li>
+<li>
+<p>Cómo poner una radio como cliente de otra red (para que el nodo haga de gateway)</p>
+</li>
+<li>
+<p>Cómo poner un password de administración para toda la red</p>
+</li>
+<li>
+<p>Cómo ponerle password al wireless</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Para información detallada de estas preguntas puedes ver los ejemplos en <a href="https://github.com/libremesh/lime-packages/blob/master/packages/lime-docs/files/www/docs/lime-example.txt">/docs/lime-example</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+    
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>Last updated 2023-04-01 14:06:29</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>
