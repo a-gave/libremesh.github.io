@@ -6,6 +6,8 @@ lang: en
 Network Profiles
 ================
 
+= Network Profiles
+
 = What is a Network Profile?
 
 Network profiles are the most convenient way for a community to organize its configuration files. During the link:development.html[compilation process], the users can select the desired network profile, which will automatically select all the needed software and include the configuration files for this community.
@@ -75,7 +77,7 @@ What is always interesting to include, is a `lime-community` file, which is the 
 
 The options that are not set in the lime-community file, are taken from the lime-defaults one. For more information on this, please read the link:docs/en_config.html[documentation on the website].
 
-= Alternative to the usage of Network Profiles
+== Alternative to the usage of Network Profiles
 
 Using a network profile is a convenient way to share the files over the internet with all the other members of your community; but it can be exhaggerated if you just want to test adding a file from time to time.
 

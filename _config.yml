@@ -1,19 +1,87 @@
 # jekyll configuration
 
-title: 'Welcome to the LibreMesh project'
+title: 'LibreMesh'
 
 exclude: [ 'Gemfile', 'Gemfile.lock', 'Rakefile', 'README', 'vendor' ]
 
 prefix: ''
+
+asciidoc_ext: txt
+
+
+# This is mostly for testing
+# url: "https://libremes.org" # the base hostname & protocol for your site
+
+# Social (First three Required)
+repo: "https://github.com/libremesh/libremesh.github.io" # edit url
+github_user: "libremesh"
+github_repo: "lime-packages"
+main_repo: "https://github.com/libremesh/lime-packages"
+
+
+
+logo: "logo/logo_nano.png"
+
+color: "#333" # primary color for header, buttons
+accentColor: black  # purple, green, etc.
+themeColor: black  # purple, green, blue, orange, purple, grey
+# fixedNav: 'true' # true or false
+
+defaults:
+  - scope:
+      path: "_docs"
+      type: "docs"
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "posts"
+      type: "posts"
+    values:
+      layout: "post"
+
+
+
+
+# added
+disable_search: true
+
+
+
+
+
+
+
+
+
+
+
+
+# plugins:
+# - jekyll-asciidoc
+
+# asciidoctor: {}
+# asciidoc_ext: txt
+# asciidoc: 
+#   processor: 
+#   - asciidoctor
+
+# just-the-docs:
+#   attributes:
+#     - toc=auto
 
 asciidoctor:
   attributes:
     - idseparator=_
     - source-highlighter=coderay
     - icons=font
-    - hardbreaks!
-    - toc=auto
+#     - hardbreaks!
+    # - toc=auto
 
-asciidoc_ext: txt
+# asciidoc_ext: txt
 
 # end of configuration

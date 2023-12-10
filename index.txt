@@ -4,7 +4,9 @@ ref: home
 lang: en
 ---
 The LibreMesh project
-======================
+=====================
+
+= The LibreMesh project
 
 == Introduction to LibreMesh
 
@@ -48,7 +50,7 @@ Organizations supporting LibreMesh:
 | FreiFunk     | Germany           | http://freifunk.net       | image:img/logo_freifunknet.png["FreiFunk",role="right"]
 | FunkFeuer    | Austria           | https://www.funkfeuer.at  | image:img/0xff_logo.png["FunkFeuer",role="right"]
 | Guifi    | Iberian peninsula | http://guifi.net          | image:img/guifi-logo.png["Guifi.net",role="right"]
-| Ibebrasil    | Brasil | https://ibebrasil.org.br/         | ]
+| Ibebrasil    | Brasil | https://ibebrasil.org.br/         | 
 | LibreRouter   | Global           | https://librerouter.org/   | image:img/librerouter_isologo.png["LibreRouter",role="right"]
 | Ninux.org    | Italy             | http://ninux.org          | image:img/ninux_logo.png["NiNux",role="right"]
 | Wakoma       | Global            | https://wakoma.co/        |

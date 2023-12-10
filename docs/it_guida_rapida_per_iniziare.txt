@@ -8,6 +8,8 @@ fontawesome_icon: fa-rocket
 LibreMesh Guida Rapida Per Iniziare
 ===================================
 
+= Guida Rapida Per Iniziare
+
 == Hardware Compatibile
 
 E’ consigliato che i router abbiamo almeno 8MB di memory flash. Per router con 4MB di memoria usa lo speciale firmware chiamato +-mini+.

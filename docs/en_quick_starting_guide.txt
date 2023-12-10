@@ -8,6 +8,7 @@ fontawesome_icon: fa-rocket
 LibreMesh Quick Starting Guide
 ==============================
 
+= Quick Starting Guide
 
 == Compatible Hardware
 

@@ -1,0 +1,30 @@
+- title: "Getting Started"
+  url: "docs/en_quick_starting_guide"
+  children:
+    - title: Get it
+      url: "getit"
+    - title: Development
+      url: "docs/en_quick_starting_guide"
+    - title: Customization
+      url: "docs/en_quick_starting_guide"
+- title: "Documentation"
+  url: "docs/index"
+  children:
+    - title: "Documentation"
+      url: "docs/index"
+    - title: Configuration
+      url: "docs/en_config"
+    - title: Discussion Forum
+      url: "forum"
+    - title: Interactive Code
+      url: "docs/extras/interactive"
+- title: "About"
+  url: "about"
+- title: "News"
+  url: "news"
+- title: "Communication"
+  url: "communication"
+- title: "Latest release firmware"
+  external_url: https://downloads.libremesh.org/current/
+- title: "Source code"
+  external_url: https://github.com/libremesh/

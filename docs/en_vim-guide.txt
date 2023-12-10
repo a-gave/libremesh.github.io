@@ -3,6 +3,8 @@
 Vim tutorial
 ===========
 
+= Vim tutorial
+
 == A very short Vim tutorial
 
 Vim is an extremely powerful console editor based on a clever idea: 

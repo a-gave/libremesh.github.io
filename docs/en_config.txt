@@ -6,6 +6,9 @@ fontawesome_icon: fa-cogs
 ---
 Configuration
 =============
+
+= Configuration
+
 :sectanchors:
 :lime-example: https://github.com/libremesh/lime-packages/blob/master/packages/lime-docs/files/www/docs/lime-example.txt[/docs/lime-example]
 
@@ -43,13 +46,10 @@ or other tools and following the documentation below.
 
 == Configuration for network administrators
 
-LibreMesh uses https://openwrt.org/docs/guide-user/base-system/uci[UCI] as its
-configuration, so does OpenWrt.
-https://openwrt.org/docs/guide-user/base-system/uci[UCI] is a database that is
-easily modified both from the command line and by editing the configuration files directly
+LibreMesh uses https://openwrt.org/docs/guide-user/base-system/uci[UCI] as its configuration, so does OpenWrt.
+https://openwrt.org/docs/guide-user/base-system/uci[UCI] is a database that is easily modified both from the command line and by editing the configuration files directly.
 All UCI configuration files are located in the `/etc/config/` directory.
-The LibreMesh configuration files that can be edited for are: `/etc/config/lime-node` and
-`/etc/config/lime-community`
+The LibreMesh configuration files that can be edited for are: `/etc/config/lime-node` and `/etc/config/lime-community`
 All other configuration files should not be modified.
 
 == Configuration levels *_Community_* and *_Node_*
@@ -89,13 +89,11 @@ config lime 'wifi'
 
 === Operation
 
-When running the `lime-config` command the first thing that happens is that the *_Node_* levels are processed,
-*_Community_* and *_Default_* and the `/etc/config/lime-autogen` file is generated.
+When running the `lime-config` command the first thing that happens is that the *_Node_* levels are processed, *_Community_* and *_Default_* and the `/etc/config/lime-autogen` file is generated.
 This file is the one that contains the configuration that is really going to be used by libremesh to configure the system.
 
 The resulting configuration files are then written for each package based on `/etc/config/lime-autogen`.
-For the settings to be applied, it is recommended to run `reboot` after `lime-config`. While there are faster ways
-of applying the modifications in certain cases, running `reboot` is the only way to ensure that all changes were applied.
+For the settings to be applied, it is recommended to run `reboot` after `lime-config`. While there are faster ways of applying the modifications in certain cases, running `reboot` is the only way to ensure that all changes were applied.
 
 === List of sections and options
 
@@ -304,7 +302,7 @@ on the first boot:
 This configuration method replaces the functionality of the `uci-defaults` scripts.
 ==============
 
-== Important
+= Important
 
 === Do not edit other configuration files that are not free mesh
 

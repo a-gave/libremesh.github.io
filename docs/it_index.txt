@@ -6,6 +6,8 @@ lang: it
 Indice della Documentazione
 ===========================
 
+= Indice della Documentazione
+
 == Contribuire alla Documentazione
 
 Siamo molto felici se ti va di contribuire alla documentazione, guarda la sezione "The Web Presence" nella pagina di link:../development.html[Sviluppo].

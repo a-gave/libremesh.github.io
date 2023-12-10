@@ -6,6 +6,8 @@ lang: en
 Development
 ===========
 
+= Development
+
 == The Source Code
 
 The code is stored inside a git tree which contains all branches and releases.

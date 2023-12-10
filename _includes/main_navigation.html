@@ -1,0 +1,42 @@
+<!-- Nav Bar -->
+
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+          <h1>
+              <a href="{{site.prefix}}">
+                  <img src="{{site.prefix}}/logo/logo_nano.png"></img>
+                  <span class="top-bar-title">LibreMesh</span>
+              </a>
+          </h1>
+      </li>
+<li class="toggle-topbar menu-icon"><a href="{{site.prefix}}"><span>Menu</span></a></li>
+  </ul>
+  
+<!-- lang --> 
+<ul class="lng">
+{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+{% for post in posts %}
+<li>
+  <a href="{{site.prefix}}{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+</li>
+{% endfor %}
+
+{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+{% for page in pages %}
+<li>
+  <a href="{{site.prefix}}{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+</li>
+{% endfor %}
+  </ul>
+<!-- fine lang-->
+
+  <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+          {% include top_nav.html %}
+      </ul>
+  </section>
+</nav>
+<!-- End Nav -->

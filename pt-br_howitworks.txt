@@ -6,6 +6,8 @@ lang: pt-br
 Como funciona
 ============
 
+= Como funciona
+
 == Objetivos a alcançar
 
   - Escalabilidade

@@ -1,8 +1,12 @@
 ---
+title: tp-link
+ref: tp-link
+lang: en
 ---
 TP-Link
 =======
 
+= TP-Link
 
 Because of the http://ml.ninux.org/pipermail/battlemesh/2016-February/004379.html[new FCC rules], new TP-Link models would require a special method to install third party firmwares like LibreMesh.
 On TP-Link devices, you can typically identify that your router is FCC locked if you get a 18005 and/or Invalid Filename error when trying to flash.

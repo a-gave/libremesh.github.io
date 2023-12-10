@@ -2,10 +2,12 @@
 title: Change Ethernet config
 ref: ethernet_config
 lang: en
-fontawesome_icon: fa-plug
+fontawesome_icon: fa-ethernet
 ---
 Changing network interface behavior
 ===================================
+
+= Changing network interface behavior
 
 == WAN port configuration
 

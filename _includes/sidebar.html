@@ -1,0 +1,148 @@
+
+
+
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+  <div class="md-sidebar__scrollwrap">
+    <div class="md-sidebar__inner">
+      <nav class="md-nav md-nav--primary" data-md-level="0">
+        <!-- <label class="md-nav__title md-nav__title--site" for="__drawer"><span class="md-nav__button md-logo">{% if site.logo %}<img height="48" src="{{ site.baseurl }}/{{ site.logo }}" width="48">{% else %}<i class="md-icon"></i>{% endif %}</span> {{ site.title }}</label>
+        <div class="md-nav__source">
+          <a class="md-source" data-md-source="github" href="{{ site.repo }}" title="Go to repository">
+          <div class="md-source__icon">
+            <svg height="24" viewbox="0 0 24 24" width="24">
+            <use height="24" width="24" xlink:href="#__github"></use></svg>
+          </div>
+          <div class="md-source__repository">
+            {{ site.github_user }}/{{ site.github_repo }}
+          </div></a>
+        </div> -->
+
+        <ul class="md-nav__list" data-md-scrollfix="">
+          <li class="md-nav__item {% if page.url == '/' %} md-nav__item--active {% endif %}">
+            <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"> 
+                <label class="md-nav__link {% if page.url == '/' %} md-nav__link--active {% endif %}" for="__toc">Home</label>
+                  <a class="md-nav__link {% if page.url == '/' %} md-nav__link--active {% endif %}" href="{{ site.baseurl }}/" title="Home">Home</a>
+
+            <!-- <nav class="md-nav md-nav--secondary">
+              <label class="md-nav__title" for="__toc">Table of contents</label>
+              <ul class="md-nav__list" data-md-scrollfix="">
+                {% include content_toc.html html=content sanitize=true class="md-nav__list" item_class="md-nav__item" submenu_class="md-nav__list" anchor_class="md-nav__link" id="nav_toc" h_min=0 h_max=3 %} -->
+
+                <!-- {% for section in site.pages %}
+                <li class="md-nav__item">
+                  <a class="md-nav__link" href="{% if section.external_url %}{{ section.external_url }}{% else %}{{ site.baseurl }}/{{ section.url }}{% endif %}"
+                     id="pancakes-{{ section.title | slugify }}" 
+                     title="{{ section.title }}">{{ section.title }}</a>
+                </li>
+                {% endfor %} -->
+              <!-- </ul>
+            </nav> -->
+
+          </li>
+
+          <!-- This navigation is completely for mobile -->
+          {% for section in site.data.toc %}
+          <li class="md-nav__item mobile-nav" style="display:none">
+            <a class="md-nav__link" href="{% if section.external_url %}{{ section.external_url }}{% else %}{{ site.baseurl }}/{{ section.url }}{% endif %}" title="{{ section.title }}">{{ section.title }}</a>
+          </li>
+          {% endfor %}
+
+          <!-- This navigation is completely for non mobile -->
+
+         {% for section in site.data.toc %}
+         <!-- check if parent should be open -->
+         <!-- {{ if page.ref in section.children.url }} -->
+         <li {% if section.children %} class="md-nav__item md-nav__item--nested not-mobile-nav" {% else %} class="md-nav__item not-mobile-nav"{% endif %}> 
+             <a class="md-nav__link pancakes-parent" {% if section.children %}href="#pancakes-{{ section.title | slugify }}"{% else %}href="{% if section.external_url %}{{ section.external_url }}{% else %}{{ site.baseurl }}/{{ section.url }}{% endif %}"{% endif %}
+                id="pancakes-{{ section.title | slugify }}" 
+                title="{{ section.title }}">{{ section.title }}</a>
+                {% if section.children %}
+                <nav class="md-nav">
+                    <ul class="md-nav__list">
+                        {% for child in section.children %}<li class="md-nav__item">
+                        <a href="{% if child.external_url %}{{ child.external_url }}{% else %}{{ site.baseurl }}/{{ child.url }}{% endif %}" 
+                           title="{{ child.title }}" style="display:none"
+                           class="md-nav__link pancakes-child">{{ child.title }}</a>
+                        </li>{% endfor %}
+                    </ul>
+              </nav>
+              {% endif %}
+         </li>
+         {% endfor %}
+
+
+
+         {% for item in site.data.structure.docs %}
+            <!-- Use the current language and default to english if doc translation is not found -->
+            {% assign docs_lang_pages=site.pages | where:"ref",item | where:"lang",lang  | default: false %}
+            {% unless docs_lang_pages %}
+            {% assign docs_lang_pages=site.pages | where:"ref",item | where:"lang","en" %}
+            {% endunless %}
+            {% assign doc_page=docs_lang_pages.first %}
+            <li class="md-nav__item {% if page.url == doc_page.url %} md-nav__link--active{% endif %}">
+              <a class="md-nav__link" href="{{site.prefix}}{{doc_page.url}}"> 
+              {% if doc_page.fontawesome_icon %}
+                <i style="padding: 0 1rem 0 0;" class="fa {{doc_page.fontawesome_icon}}" aria-hidden="true"></i>
+              {% endif %}
+                <span>
+                {{ doc_page.title }}
+                </span>
+              </a>
+            </li>
+          {% endfor %}
+    
+
+        <li class="md-nav__item">
+          <a class="md-nav__link" href="/communication.html">Links</a></li>
+        </li>
+          <li class="md-nav__item">
+            <a class="md-nav__link" href="https://downloads.libremesh.org/current/">
+              <i class="fa fa-download" style="padding: 0 1rem 0 0" aria-hidden="true"></i>
+              <span>Latest Release Firmware</span>
+            </a>
+          </li>
+          <li class="md-nav__item">
+            <a class="md-nav__link" href="/development.html">
+              <i class="fa fa-linux" style="padding: 0 1rem 0 0" aria-hidden="true"></i>
+              <span>Build Firmware Locally</span>
+            </a>
+          </li>
+          <li class="md-nav__item">
+            <a class="md-nav__link" href="https://github.com/libremesh/">
+              <i class="fa fa-code-fork" style="padding: 0 1rem 0 0" aria-hidden="true"></i>
+              <span>Source Code</span>
+            </a>
+          </li>
+          <li class="md-nav__item">
+            <a class="md-nav__link" href="https://www.autistici.org/mailman/listinfo/libremesh">
+              <i class="fa fa-envelope" style="padding: 0 1rem 0 0" aria-hidden="true"></i>
+              <span>Mailing List</span>
+            </a>
+          </li>
+          <li class="md-nav__item">
+            <a class="md-nav__link" href="https://matrix.to/#/#libremesh-dev:matrix.guifi.net">
+              <i class="fa fa-comments" style="padding: 0 1rem 0 0" aria-hidden="true"></i>
+              <span>Element Chatroom</span>
+            </a>
+          </li>
+      
+      </ul>
+
+      </nav>
+    </div>
+  </div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+  <div class="md-sidebar__scrollwrap">
+    <div class="md-sidebar__inner">
+      <nav class="md-nav md-nav--secondary">
+        <label class="md-nav__title" for="__toc">Table of contents</label>
+        <!-- <ul id="nav-toc" class="md-nav__list" data-md-scrollfix=""> -->
+        <!-- toc will be appended here!-->
+
+        {% include content_toc.html html=content sanitize=true class="md-nav__list" item_class="md-nav__item" submenu_class="md-nav__list" anchor_class="md-nav__link" id="nav_toc" h_min=1 h_max=3 %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

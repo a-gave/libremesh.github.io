@@ -6,6 +6,8 @@ lang: es
 The LibreMesh project
 ======================
 
+= Inicio
+
 == Introducción a LibreMesh
 
 LibreMesh es un framework modular para crear firmwares basados en OpenWrt para nodos wireless mesh.

@@ -7,6 +7,8 @@ fontawesome_icon: fa-hand-o-right
 Connecting to LibreMesh nodes
 =============================
 
+= Connecting to LibreMesh nodes
+
 == Connecting to your own node
 
 === Connecting to the Web Interface
@@ -35,6 +37,6 @@ You could get an error like this: `Unable to negotiate with 10.13.0.1 port 22: n
 Leaving the LibreMesh router with no administrator password is a security risk! You should set a root password immediately! Either via the web interface of the +passwd+ command in the console.
 =========================
 
-=== Cannot connect?
+== Cannot connect?
 
 Visit the link:en_troubleshooting.html[Troubleshooting] page.

@@ -2,10 +2,12 @@
 title: Hardware
 ref: hardware
 lang: en
-fontawesome_icon: fa-server
+fontawesome_icon: fa-microchip
 ---
 Hardware Documentation Index
 ============================
+
+= Hardware Documentation Index
 
 == Hardware
 
@@ -19,7 +21,7 @@ Please, take into account that these pages are third-party contributed, so if
 you find the opportunity expand this page with the "Edit this page" button in the upper right corner of this page.
 
 
-== Suggested Hardware
+=== Suggested Hardware
 
 Here we list some characteristics which should ensure a full compatibility with LibreMesh.
 Plenty of other OpenWrt-supported devices not matching these characteristics can also be used but some of LibreMesh features could be malfunctioning.

@@ -6,6 +6,8 @@ lang: en
 Communication
 =============
 
+= Communication
+
 == Mailing Lists
 
 The project communicate on the following mailing list
