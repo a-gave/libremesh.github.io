@@ -1,0 +1,200 @@
+# News
+
+## 2025-05-04 - LibreMesh 2024.1 release
+
+The LibreMesh community is enthusiast to finally announce a new release of LibreMesh:
+LibreMesh 2024.1 "Fantastic Forwarder".
+
+Four years of work and testing, [334 commits](https://github.com/libremesh/lime-packages/compare/v2020.4...v2024.1) since LibreMesh 2020.4 in the lime-packages repository only, 10 developers, many improvements and the updated support for OpenWrt 23.05!
+
+A big news first: this LibreMesh release can be downloaded and customized online (!!!) using a tool developed by the OpenWrt community: the firmware selector. This is a large step forward in one of our main objective: enable everyone to build a network community, without being a shell-ninja. Enjoy it at this link: https://repo.libremesh.org/selector/
+
+### What's new in 2024.1 "Fantastic Forwarder"
+
+It is impossible to do a meaningful list of all the changes. A non complete list of the most relevant
+developments:
+
+* Compatibility with the new firewall adopted by modern OpenWrt: nftables;
+* Compatibility with the new configuration method for switches (DSA) while maintaining the compatibility with the old one (swconfig);
+* Compatibility with the usage of ujail introduced in OpenWrt for additional security;
+* Incorporate a [new version of shared-state](https://github.com/libremesh/lime-packages/tree/master/packages/shared-state-async) written from scratch for performances;
+* Many fixes and code improvement, also coming from the testing grants funded with the [donations collected on OpenCollective](https://opencollective.com/libremesh).
+
+### Contributors
+
+This release has contributions from communities and individuals from all around the world. Testing, software development, documentation, community building. Thank you all!!
+
+Additionally to the [many many people](https://openhub.net/p/libre-mesh/contributors?query=&time_span=&sort=twelve_month_commits) who contributed to set the foundations of LibreMesh, this specific release was made with the contributions of these people:
+[Gioacchino Mazzurco](https://github.com/G10h4ck), [Gothos](https://github.com/a-gave), [Gui Iribarren](https://github.com/altergui), [Henrique Mohr](https://github.com/henmohr), [Ilario Gelmetti](https://github.com/ilario), [Javier Jorge](https://github.com/javierbrk), [Paul Spooren](https://github.com/aparcar), [Pony](https://github.com/pony1k), [Santiago Piccinini](https://github.com/spiccinini), [Selankon](https://github.com/selankon).
+
+## 2023-09-06 - LibreMesh on the waves
+
+On Friday the 19th of July, one of us was invited to Radio Campus in Brussels, for the "Radio Source" program, where they talk about current Free Software news and the world of Open Source development.
+We had the opportunity to talk with the hosts for about an hour about LibreMesh, why the project was created, how it was used in 2024 and about what a mesh network is, what are its purposes, and what LibreMesh offers regarding mesh networks. 
+The archive is available here https://redif.src.brussels/ under 2024 and then select the file from the 19th of July!
+
+## 2023-10-07 - A new stable release and a release candidate for Openwrt 22!
+
+We released a new version of Libremesh based on OpenWrt 19!
+
+https://downloads.libremesh.org/releases/2020.4-ow19/
+
+and a new release candidate based on OpenWrt 22:
+
+https://downloads.libremesh.org/releases/2023.1-rc2-ow22/
+
+
+::: info
+Firmware images of libremesh-2020.4 based on openwrt-19.07.10, were signed with the wrong signing keys.
+To install additional `kernel_modules` via `opkg`:
+
+- Add the build repository for the selected `target/subtarget` here *ar71xx/generic*:
+```
+echo "src/gz libremesh_kmods http://downloads.libremesh.org/releases/2020.4-ow19/targets/ar71xx/generic/packages" >> /etc/opkg/limefeeds.conf
+```
+- Then add the signing key:
+```
+cat << EOF > /etc/opkg/keys/c37d41571f77f282
+untrusted comment: signed by libremesh.org for 2020.4 release builds
+RWTDfUFXH3fygrM5F7kON6UQTWjWG9aNVBSNFnUv3cHXJjFVmZrGJ6Iw
+EOF
+```
+:::
+
+This means that the release candidate needs testing, bug fixing and
+loads of community love so that we can have an amazing release that can
+actually ease the creation of community networks everywhere.
+
+Check out the: https://lists.autistici.org/message/20230929.142923.34529fc1.en.html
+https://lists.autistici.org/message/20230929.152044.f1940e95.en.html
+for more detailed information.
+
+Another great gourgeous news is that from now we have a Firmware Selector, check it out here:
+https://repo.libremesh.org/selector
+
+This release has contributions from communities and individuals from all around the world. 
+Testing, software development, documentation, community building. Thank you all!!
+
+
+## 2023-03-10 - Endorsement to BattleMesh v15 in Calafou, Barcelona
+
+The Wireless Battle of the Mesh is going live for its 15th edition. This time for a full *week* again!
+
+The dates and venue have been set by the WBM community:
+::: info
+8-14th of May 2023
+Calafou, Vallbona d'Anoia, Barcelona
+https://www.openstreetmap.org/#map=19/41.51115/1.70263
+https://calafou.org/web/index.php/sobre-calafou#eng
+:::
+
+LibreMesh community supports and will participate in this year's Wireless BattleMesh (WBM) v15 in Calafou, Barcelona.
+
+LibreMesh will be one of the topics that will be discussed there, together with routing protocols for mesh networks, human communities below the wireless nodes, and much more technical and political topics related to community networks!
+
+You can see the full announcement email here    
+https://lists.autistici.org/message/20230310.090007.3ae9dd40.en.html    
+And the event website here:    
+https://battlemesh.org/BattleMeshV15
+
+Enjoy meshing!
+
+## 2022-09-18 - Participation to BattleMesh v14 in Rome
+
+LibreMesh supports this year's "Wireless Battle of the Mesh - Building Community Networks for Fun and Non-Profit".
+
+The event aims to bring together people from across the globe who are interested in community networks, including wireless mesh network technologies, fiber infrastructure, Do-It-Yourself Internet Access Providers, and more generally how to create and maintain a thriving community of people involved in building their own networks.
+
+We envision 4 days of expert presentations, practical workshops, hacking sessions, and fruitful discussions: whether you are a mesh networking enthusiast, community networking activist, protocol developer, or have an interest in networking in general, come and join the event!
+
+The Battlemesh is free of charge and open for all.
+
+This year, the event will take place from Monday 19th to Thursday 22nd of September, 2022 in Rome, Italy!
+Check out more information at https://www.battlemesh.org/BattleMeshV14
+
+## 2020-12-15 - LibreMesh 2020.1 release
+
+The LibreMesh team is happy to announce a new version of LibreMesh, 2020.1 "Expansive Emancipation".
+Three years of work, 882 commits, 23 developers, tons of bug fixes and improvements!
+
+This release is compatible with OpenWrt stable 19.07.5 and old-stable 18.06.9. For the time  source-only
+release so you will need compile it yourself for the devices used by your community using the easy to
+follow instructions in https://libremesh.org/development.html
+
+
+### What's new in 2020.1 "Expansive Emancipation"
+
+It is imposible to do a meaninful list of all the changes. A non complete list of the most relevant
+developments:
+
+* [LimeApp](https://github.com/libremesh/lime-app/): an app to for the maintenance and deploy of community networks targeted to non-technical
+community members.
+* A new community-oriented configuration system that facilitates collective maintenance of configurations.
+* shared-state, a shared database for the network.
+* first-boot-wizard, an optional helper to deploy and extend the network that it is well integrated with the LimeApp.
+* [Pirania](https://github.com/libremesh/lime-packages/blob/master/packages/pirania/Readme.md), an optional boucher and captive portal solution for community networks
+
+* Hundreds of fixes and code improvement.
+
+
+### Contributors
+
+This release has contributions from communities and individuals from all around the world. Testing, software development, documentation, community building. Thank you all!!
+
+A list of the software developers that contributed to this release was easily gathered from the git history:
+AngiieOG, Brad, Daniel Golle, FreifunkUFO, German Ferrero, Gioacchino Mazzurco, Gui Iribarren, Ilario Gelmetti,
+Jess, Luandro, Marcos Gutierrez, Michael Jones, Mike Russell, Nicolás Pace, PatoGit, Pau, Paul Spooren, Pedro Mauro,
+Santiago Piccinini, Vittorio Cuculo, hiure, radikalbjr, valo.
+
+## 2020-09-18 - A release candidate for the next release!
+
+Although the LibreMesh development never stopped, it was since the 17.06
+"Dayboot Rely" release that we didn't have an _official_ release.
+The goal is to have the **final release at the beginning of November**.
+
+This means that the release candidate needs testing, bug fixing and
+loads of community love so that we can have an amazing release that can
+actually ease the creation of community networks everywhere.
+
+Check out the [announcement](https://web.archive.org/web/20220716110806/https://lists.libremesh.org/archives/list/lime-users@lists.libremesh.org/thread/72K6ZKQEKSOOVSPPXCD77ZP4EZWOSWBN)
+for more detailed information.
+
+## 2018-04-13 - Join us at Mesh is in the Air!
+
+We endorse [Mesh is in the Air](https://www.wireless-meshup.org) - this years mesh up of the [Wireless Battle of the Mesh](https://www.battlemesh.org) and [Wireless Community Weekend](https://wiki.freifunk.net/Wireless_Community_Weekend_2018).
+
+If you are a mesh networking enthusiast, community activist, have an interest in wifi or dynamic routing protocols, you can't miss this event! Check out more details in the [official website](https://www.wireless-meshup.org).
+
+LibreMesh developers and users will be attending the event, giving talks about development progress and state, and in general sharing a nice time.
+
+## 2017-06-06 - Attended Sysupgrades
+
+Within this years [GSoC](https://summerofcode.withgoogle.com) a fellow student tries to setup a new way to perform sysupgrades on LibreMesh Routers (and LEDE/OpenWrt in general).
+The idea is to generate sysupgrade images on demand with all manually installed packages included. 
+
+More details are shown in the official [Freifunk Blogpost](https://blog.freifunk.net/2017/05/30/gsoc-2017-attended-sysupgrade/) (english)
+
+## 2016-10-06 - LibreRouter
+
+The Libre Router project will design and produce a high performance multi-radio wireless router targeted at Community Networks needs.
+
+For more info visit the [librerouter web](https://librerouter.org). Or read the [guifi.net article](https://guifi.net/ca/node/90285) (spanish).
+
+## 2016-08-06 - Endorsement to LEDE project
+
+image:img/lede.png["The LEDE logo",role="right"]
+
+We endorse the [LEDE project](https://www.lede-project.org/) and we plan to start basing LibreMesh releases on Linux Embedded Development Environment (LEDE) as soon as it will have a stable release.
+
+## 2016-08-01 - Project Meeting LiMeCat2016q3
+
+Naming:	LiMeCat2016q3 +
+Date:	2016-08-06T12:00+02:00/2016-08-07T17:00+02:00 +
+Venue:	CSA La Talaia, Passeig Mas Roig 52-54/ Rambla Jacint Verdaguer 215, FGC: Valldoreix (Sant Cugat Del Vallés), Barcelona. [Web site](https://csalatalaia.wordpress.com/).
+
+## 2016-04-13 - Project Meeting LiMeCat2016
+
+Naming:	LiMeCat2016 +
+Date:	2016-04-16T12:00+02:00/2016-04-17T17:00+02:00 +
+Venue:	CSOA Matakrostes, Passeig de Sevilla 132, Valldoreix, Barcelona. [Map](https://guifi.net/VDXpgSevilla132). +
+Report:	[email](https://web.archive.org/web/20220716110509/https://lists.libremesh.org/archives/list/lime-users@lists.libremesh.org/message/QXE5E3OSERZJUL6PVMVK7IWTM7RDQU6L/) in Spanish.
