@@ -1,0 +1,83 @@
+# Network Profiles
+
+## What is a Network Profile?
+
+Network profiles are the most convenient way for a community to organize its configuration files. During the link:development.html[compilation process], the users can select the desired network profile, which will automatically select all the needed software and include the configuration files for this community.
+
+They are organized in folders with some content in the [network-profiles repository](https://github.com/libremesh/network-profiles).
+
+## How to create a Network Profile
+
+Practically, each community can create a folder in the [network-profiles repository](https://github.com/libremesh/network-profiles) with the community's name, and, inside this, create one or more profiles (for example you can have different profiles for nodes of the backbone or for access points, or for nodes with large or small flash or RAM memory).
+
+You will need to create a Github user, fork the [network-profiles repository](https://github.com/libremesh/network-profiles), clone your fork on a computer, create the directories, create a `Makefile` (see below), add some content in the `root/` folder (see below), commit the changes, push them to your forked repository and finally open a pull request from your repository to the official [network-profiles one](https://github.com/libremesh/network-profiles).
+
+### Cloning your fork
+
+Here we will skip the explanation on most of the git and Github-related steps, please search on the internet how to perform them or ask us on the link:communication.html[project's communication channels].
+
+Once you forked the [network-profiles repository](https://github.com/libremesh/network-profiles) with your user, clone your fork:
+
+``` sh
+git clone git@github.com:your_username/network-profiles.git
+```
+
+### Creating the directories
+
+Each community will have to create its directory.
+
+``` sh
+cd network-profiles
+mkdir MyMesh.iscool
+```
+
+And inside that directory, you'll have to create a directory for each different profile you want to have. Most communities will have only one profile.
+
+``` sh
+cd MyMesh.iscool
+mkdir standard
+mkdir lowmem
+mkdir gateway
+```
+
+### Creating a Makefile
+
+The Network Profiles get converted to packages which, as mentioned above, will include some files but can also select some new software to be installed as a dependency. In order to compile them as packages, a Makefile is needed.
+
+In the Makefile you can indicate a description and include a list of the dependencies, which are the packages that gets selected by selecting your network-profile.
+
+The Makefile for the network-profiles repository has to be inside the profile directory, for example `network-profiles/MyMesh.iscool/standard/Makefile`, and it will look like this:
+
+``` makefile
+include $(TOPDIR)/rules.mk
+
+PROFILE_DESCRIPTION:=Standard profile for MyMesh community
+PROFILE_DEPENDS:=+lime-proto-babeld +lime-proto-batadv +lime-proto-anygw
+
+include ../../profile.mk
+
+# call BuildPackage - OpenWrt buildroot signature
+```
+
+and the lines you should customize are only the PROFILE_DESCRIPTION and PROFILE_DEPENDS ones. In the list of the PROFILE_DEPENDS, please note that each package's name is preceeded by a `+`. There is no need to specify the `lime-system` package as it is already included.
+
+### Adding files to the "root" folder
+
+For including custom files in the compiled image, you can create a `root/` folder in the profile folder, for example `network-profiles/MyMesh.iscool/standard/root/`. In this directory, you will have to create the folders structure and the files you want to have in the compiled firmware.
+
+What is always interesting to include, is a `lime-community` file, which is the file containing the configuration options for your community. This file will need to appear in the firmware image in the `/etc/config/lime-community`, so that you will need to create it here in `network-profiles/MyMesh.iscool/standard/root/etc/config/lime-community`.
+
+<!-- The options that are not set in the lime-community file, are taken from the lime-defaults one. For more information on this, please read the [documentation on the website](docs/en_config.html). -->
+
+### Alternative to the usage of Network Profiles
+
+Using a network profile is a convenient way to share the files over the internet with all the other members of your community; but it can be exhaggerated if you just want to test adding a file from time to time.
+
+In the buildroot (which is the system that you can use for compiling LibreMesh as described in the [development page](/development.html)) you can create a directory named `files`, and the content of this directory will, in the final LibreMesh image, overwrite every file with the same path and name, including the ones from the selected Network Profile.
+
+For example:
+``` sh
+cd openwrt
+mkdir files
+rsync -aPh --delete ~/network-profiles/valsamoggia.ninux.org/vs-ninux-generic/root/ files/
+```

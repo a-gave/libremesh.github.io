@@ -1,0 +1,184 @@
+import { createContentLoader, defineConfig, type DefaultTheme } from 'vitepress'
+import { generateSidebarItems, getFiles } from './sidebar'
+
+const isBuild = process.env.NODE_ENV === 'production'
+const baseUrl = isBuild && '/libremesh.github.io' || ''
+
+const libremesh = {
+  stable_version: '2024.1',
+  stable_branch_openwrt: ['23.05'],
+  oldstable_version: '2020.4',
+  oldstable_branch_openwrt: ['19.07'],
+}
+
+const packages = await getFiles('docs/packages/*.md'); // Path to folder
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
+  title: "LibreMesh",
+  description: "A modular framework for creating OpenWrt-based firmwares for wireless mesh nodes",
+  head: [['link', { rel: 'icon', href: baseUrl+'/favicon.ico' }]],
+  lastUpdated: true,
+  base: baseUrl,
+  metaChunk: true,
+
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en'
+    },
+  },
+
+  themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
+    logo: { light: '/libremesh_logo.svg', dark: '/libremesh_logo.svg', alt: 'Logo' },
+    siteTitle: false,
+    editLink: {
+      pattern: 'https://github.com/a-gave/libremesh.github.io/edit/main/docs/:path',
+      text: 'Edit this page on GitHub'
+    },
+    search: {
+      provider: 'local'
+    },
+
+    nav: nav(),
+
+    sidebar: {
+      '/': { base: '/', items: sidebarGuide() },
+      '/reference/': { base: '/reference/', items: sidebarReference() }
+    },
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/libremesh/lime-packages' },
+      // { icon: 'maildotru', link: 'https://www.autistici.org/mailman/listinfo/libremesh' },
+      { icon: 'matrix', link: 'https://matrix.to/#/#libremesh-dev:matrix.guifi.net' },
+      { icon: 'mastodon', link: 'https://social.freifunk.net/@libremesh' },
+      { icon: 'peertube', link: 'https://media.exo.cat/a/libremesh' }
+    ],
+  },
+  // async buildEnd() {
+  //   // const meetings = await createContentLoader('meetings/*.md').load()
+  //   // generate files based on posts metadata, e.g. RSS feed
+  // }
+})
+
+function nav(): DefaultTheme.NavItem[] {
+  return [
+    { text: 'Reference', link: '/reference/configuration' },  
+    // { text: 'News', link: '/news' },  
+    { text: 'v2024.1',
+      items: [
+        { text: 'v2020.4', link: '/news/2023-10-07' },
+        { text: 'News', link: '/news' },
+        { text: 'Changelog', link: 'https://github.com/libremesh/lime-packages/tree/master/CHANGELOG.md'},
+        { text: 'Issues', link: 'https://github.com/libremesh/lime-packages/issues'},
+      ]
+    },
+  ]
+}
+
+function sidebarGuide(): DefaultTheme.SidebarItem[] {
+  return  [
+    {
+      text: 'Introduction',
+      collapsed: false,
+      items: [
+        { text: 'What is LibreMesh?', link: '/what-is-libremesh' },
+        { text: 'Getting Started', link: '/getting-started' },
+        { text: 'Features', link: '/features' },
+      ]
+    },
+    {
+      text: 'User Guide',
+      collapsed: false,
+      items: [
+        { text: 'Connecting to the router', link: '/install/connecting' },
+        { text: 'Packages selection', 
+          link: '/install/packages-selection', 
+          collapsed: true,
+          items: [
+          { text: 'Build customization', link: '/install/packages-selection' },
+          { text: 'Network Profiles', link: '/install/network-profiles' }
+        ] },
+        { text: 'Build LibreMesh', 
+          link: '/build',
+          collapsed: true,
+          items: [
+            { text: 'Build methods', link: '/build/' },
+            { text: 'Imagebuilder', link: '/build/imagebuilder' },
+            { text: 'Buildroot', link: '/build/buildroot/debian'}
+        ]}
+      ]
+    },
+    {
+      text: 'Developer Guide',
+      collapsed: false,
+      items: [
+        { text: 'Run it on QEMU', link: '/install/qemu' }
+      ]
+    },
+    {
+      text: 'Community',
+      collapsed: false,
+      items: [
+        { text: 'Communication', link: '/communication' },
+        { text: 'Contribute', link: '/contribute' },
+        { text: 'Meetings', link: '/meetings' },
+        { text: 'News', link: '/news' }
+
+      ]
+    },
+    {
+      text: 'Resources',
+      collapsed: false,
+      link: '/resources',
+      items: [
+        { text: 'Media list', link: '/resources/media_list' },
+        { text: 'Related projects', link: '/resources/related_projects' },
+        { text: 'Tools', 
+          link: '/resources/tools/monitoring',
+          collapsed: true,
+          items: [
+            { text: 'Monitoring', link: '/resources/tools/monitoring' },
+        ]},
+      ]
+    },
+    {
+      text: 'Packages',
+      collapsed: false,
+      link: '/resources',
+      items: generateSidebarItems(packages),
+    },
+  ]
+}
+
+
+function sidebarReference(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Reference',
+      items: [
+        { text: 'Configuration', link: 'configuration' },
+          { text: 'Flavors', link: '/reference/flavors' },
+        { text: 'lime-files', items: [
+          { text: 'System options', link: 'system' },
+          { text: 'Network options', link: 'network/', items: [
+            { text: 'Protocols list', link: 'network/protocols-list'},
+            { text: 'Protocols options', link: 'network/protocols-options'},
+            { text: 'Interface specific', link: 'network/interface-specific'},
+          ] },
+          { text: 'Wifi', link: 'wifi', items: [
+            { text: 'Band specific', link: 'wifi#wifi-band-specific-options'},
+            { text: 'Interface specific', link: 'wifi#wifi-interface-specific-options'},
+            { text: 'Client mode', link: 'wifi#wifi-client-mode'},
+            { text: 'Backbone AP', link: 'wifi#wifi-backbone-ap'},
+          ] },
+          { text: 'Generic UCI configs', link: 'openwrt_configs' },
+          { text: 'BGP', link: 'bgp' },
+          { text: 'Ground Routing', link: 'wifi' },
+          { text: 'Watchcat', link: 'watchcat' }
+        ]}
+      ]
+    }
+  ]
+}
