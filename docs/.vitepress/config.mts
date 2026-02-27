@@ -11,7 +11,7 @@ const libremesh = {
   oldstable_branch_openwrt: ['19.07'],
 }
 
-const packages = await getFiles('docs/packages/*.md'); // Path to folder
+const packages = await getFiles('docs/packages/*/index.md'); // Path to folder
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -27,6 +27,13 @@ export default defineConfig({
       label: 'English',
       lang: 'en'
     },
+  },
+
+  rewrites: {
+    // ':page*': 'docs/:page*',
+    // 'packages/pkg-a/src/foo.md': 'pkg-a/foo.md',
+    // 'packages/pkg-b/src/index.md': 'pkg-b/index.md',
+    // 'packages/pkg-b/src/bar.md': 'pkg-b/bar.md'
   },
 
   themeConfig: {
@@ -92,13 +99,13 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'User Guide',
       collapsed: false,
       items: [
-        { text: 'Connecting to the router', link: '/install/connecting' },
+        { text: 'Connecting to the router', link: '/guide/connecting' },
         { text: 'Packages selection', 
-          link: '/install/packages-selection', 
+          link: '/guide/packages-selection', 
           collapsed: true,
           items: [
-          { text: 'Build customization', link: '/install/packages-selection' },
-          { text: 'Network Profiles', link: '/install/network-profiles' }
+          { text: 'Build customization', link: '/guide/packages-selection' },
+          { text: 'Network Profiles', link: '/guide/network-profiles' }
         ] },
         { text: 'Build LibreMesh', 
           link: '/build',
@@ -106,7 +113,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           items: [
             { text: 'Build methods', link: '/build/' },
             { text: 'Imagebuilder', link: '/build/imagebuilder' },
-            { text: 'Buildroot', link: '/build/buildroot/debian'}
+            { text: 'Buildroot', link: '/build/buildroot'}
         ]}
       ]
     },
@@ -114,7 +121,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'Developer Guide',
       collapsed: false,
       items: [
-        { text: 'Run it on QEMU', link: '/install/qemu' }
+        { text: 'Run it on QEMU', link: '/guide/qemu' }
       ]
     },
     {
@@ -145,8 +152,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     },
     {
       text: 'Packages',
-      collapsed: false,
-      link: '/resources',
+      collapsed: true,
+      link: '/packages',
       items: generateSidebarItems(packages),
     },
   ]

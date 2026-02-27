@@ -4,7 +4,7 @@ aside: false
 
 <script setup>
 import { data as openwrt } from '/openwrt.data.js'
-import { data as packages } from '/packages.data.js'
+// import { data as packages } from '/packages.data.js'
 
 // console.log(packages)
 openwrt.stable_branch = openwrt.stable_version.substr(0,5)
@@ -31,6 +31,8 @@ const build = {
 </script>
 
 # ImageBuilder
+
+[[toc]]
 
 Refers to the OpenWrt wiki [Using the Image Builder](https://openwrt.org/docs/guide-user/additional-software/imagebuilder)
 for detailed options
@@ -187,7 +189,7 @@ EOF
 
 ## Custom files
 Ideally add your own `lime-community` files within the container in the folder `./files/etc/config/`.    
-To find all possible options consult the [lime-example][lime-example] file.    
+To find all possible options consult the [`Configuration`][/reference/configuration] page.    
 
 Now create an image of your choice, to see the names of supported profiles run
 `make info` first.
@@ -211,7 +213,7 @@ make image \
 
 ### Build using Network Profiles
 
-Refers to [Network Profiles](/install/network-profiles)
+Refers to [Network Profiles](/guide/network-profiles)
 
 ```sh
 make image \

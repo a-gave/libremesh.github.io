@@ -9,10 +9,10 @@ These addresses are available as well:
   - http://10.13.x.x - node default LAN `br-lan` ipv4 address
   - http://meuno.info - other anygw FQDN
   - http://minodo.info - other anygw FQDN
-  - http://\<hostname\> - device hostname
+  - http://\<hostname\> - device `hostname`
   - http://\<hostname\>.thisnode.info - device FQDN
   - http://\[fd0d:fe46:8ce8::1\] - default anygw ipv6
-  - http://\[fd0d:fe46:8ce8::x:xx/64\] - node default LAN `br-lan` ipv6 address
+  - http://\[fd0d:fe46:8ce8::x\:xx/64\] - node default LAN `br-lan` ipv6 address
 
 ![lime-app](/lime-app.png)
 

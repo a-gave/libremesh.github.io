@@ -1,0 +1,6 @@
+[submodule "lime-packages"]
+	path = lime-packages
+	url = https://github.com/libremesh/lime-packages
+[submodule "network-profiles"]
+	path = network-profiles
+	url = https://github.com/libremesh/network-profiles

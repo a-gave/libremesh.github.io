@@ -2,7 +2,7 @@
 
 ## What is a Network Profile?
 
-Network profiles are the most convenient way for a community to organize its configuration files. During the link:development.html[compilation process], the users can select the desired network profile, which will automatically select all the needed software and include the configuration files for this community.
+Network profiles are the most convenient way for a community to organize its configuration files. During the [compilation process](/build/buildroot), the users can select the desired network profile, which will automatically select all the needed software and include the configuration files for this community.
 
 They are organized in folders with some content in the [network-profiles repository](https://github.com/libremesh/network-profiles).
 
@@ -73,7 +73,7 @@ What is always interesting to include, is a `lime-community` file, which is the 
 
 Using a network profile is a convenient way to share the files over the internet with all the other members of your community; but it can be exhaggerated if you just want to test adding a file from time to time.
 
-In the buildroot (which is the system that you can use for compiling LibreMesh as described in the [development page](/development.html)) you can create a directory named `files`, and the content of this directory will, in the final LibreMesh image, overwrite every file with the same path and name, including the ones from the selected Network Profile.
+In the buildroot (which is the system that you can use for compiling LibreMesh as described in the [development page](/build/buildroot)) you can create a directory named `files`, and the content of this directory will, in the final LibreMesh image, overwrite every file with the same path and name, including the ones from the selected Network Profile.
 
 For example:
 ``` sh

@@ -15,7 +15,7 @@ It is recommended that the router has **at least**:
   - 1 radio working at 2.4GHz radio and 1 at 5GHz
 
 It is possible to install LibreMesh on routers with 8 MB of flash and 64 MB of RAM    
-Read the OpenWrt's [`8/64 warning`](https://openwrt.org/supported_devices/864_warning) and refers to the page [packages selection](/install/packages-selection) for build customization.  
+Read the OpenWrt's [`8/64 warning`](https://openwrt.org/supported_devices/864_warning) and refers to the page [packages selection](/guide/packages-selection) for build customization.  
 :::
 
 ::: warning CAUTION
@@ -59,7 +59,7 @@ It is strongly adviced to **install OpenWrt first**:
 
 ## Connecting to the router
 The router could be reached via web at http://thisnode.info.    
-See the page [Connecting to the router](install/connecting) for detailed options and troubleshooting
+See the page [Connecting to the router](guide/connecting) for detailed options and troubleshooting
 
 
 ## Configuration

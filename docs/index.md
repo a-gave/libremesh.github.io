@@ -65,8 +65,6 @@ features:
 | Coolab          | Brasil              | https://www.coolab.org/                   | 
 | Janastu CowMesh | Rural Karnataka     | https://open.janastu.org/projects/cowmesh | 
 
-<!--@include: https://raw.githubusercontent.com/libremesh/lime-packages/refs/heads/master/README.md-->
-
 <style>
 #organizations-supporting-libremesh + table > thead,
 #community-mesh-networks-using-libremesh + table > thead {

@@ -19,7 +19,7 @@ Assemble prebuilt kernel, packages and device information to produce the firmwar
 ### [lime-sdk](https://github.com/libremesh/lime-sdk)
 Build packages using the OpenWrt SDK and firmware images using the OpenWrt ImageBuilder
 
-### [Buildroot](buildroot/debian)
+### [Buildroot](buildroot)
 Compile everything: tools, toolchain, kernel, packages, firmwares
 
 ## Other methods

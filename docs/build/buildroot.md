@@ -1,8 +1,14 @@
+---
+aside: false
+---
+
 <script setup>
 import { data as openwrt } from '/openwrt.data.js'
 </script>
 
 # Buildroot
+
+[[toc]]
 
 ## Build system setup
 Refers to the OpenWrt wiki [Build system setup](https://openwrt.org/docs/guide-developer/toolchain/install-buildsystem)
@@ -77,7 +83,7 @@ make menuconfig
 
 
 
-Check out the +target+ (e.g. +ATH79+), +subtarget+ (e.g. +generic+) and +profile+ (e.g. +tl-wdr3600-v1+) of your router on https://openwrt.org/toh/start[OpenWrt table of hardware].
+Check out the +target+ (e.g. +ATH79+), +subtarget+ (e.g. +generic+) and +profile+ (e.g. +tl-wdr3600-v1+) of your router on [OpenWrt table of hardware](https://openwrt.org/toh/start).
 
 Select the _Target System_, _Subtarget_ and _Target Profile_ accordingly.
 
@@ -95,15 +101,14 @@ Select the _Target System_, _Subtarget_ and _Target Profile_ accordingly.
 Optionally, **deselect** unused packages:
 - Network -> ppp
 
-If you local community has a profile in the https://github.com/libremesh/network-profiles/[network-profiles repository], you can select it in:
+If you local community has a profile in the [network-profiles repository](https://github.com/libremesh/network-profiles/), you can select it in:
 
 - LibreMesh -> network-profile -> profile-your_community-your_profile
 
-[NOTE]
-=========================
+::: tip NOTE
 Network profiles are the specific configuration from the communities, and are stored in this collective 
-https://github.com/libremesh/network-profiles/[repository], but they can also be kept locally, depending on how every community network manages itself. For more instructions on how to create a profile or how to use a local one, check out the link:development-network_profiles.html[network profiles page].
-=========================
+[repository](https://github.com/libremesh/network-profiles/), but they can also be kept locally, depending on how every community network manages itself. For more instructions on how to create a profile or how to use a local one, check out the [network profiles page](../guide/network-profiles).
+:::
 
 **Select** (press space until when an asterisk appears, like `<*>`) LibreMesh packages:
 
@@ -119,10 +124,9 @@ https://github.com/libremesh/network-profiles/[repository], but they can also be
 ** shared-state-nodes_and_links (nodes_and_links module for shared-state)
 * LibreMesh -> babeld-auto-gw-mode
 
-[NOTE]
-=========================
-If after the compilation you don't see the compiled image in the `bin/targets/.../.../` folder, it is possible that your router has such a small flash memory that the aforementioed packages don't fit in it (it can happen also with routers having 8 MB of flash memory when selecting huge packages to be included). In this case, you can remove the `.config` generated packages list and repeat the packages selection without including `lime-app`. If the compiled image is still too large, try selecting only `lime-proto-anygw`, `lime-proto-batadv` and `lime-proto-babeld` or following https://openwrt.org/docs/guide-user/additional-software/saving_space[this guide].
-=========================
+::: tip NOTE
+If after the compilation you don't see the compiled image in the `bin/targets/.../.../` folder, it is possible that your router has such a small flash memory that the aforementioed packages don't fit in it (it can happen also with routers having 8 MB of flash memory when selecting huge packages to be included). In this case, you can remove the `.config` generated packages list and repeat the packages selection without including `lime-app`. If the compiled image is still too large, try selecting only `lime-proto-anygw`, `lime-proto-batadv` and `lime-proto-babeld` or following [this guide](https://openwrt.org/docs/guide-user/additional-software/saving_space).
+:::
 
 Some more packages are recommended but not mandatory for a working LibreMesh network. Consider avoiding to select the following packages _only_ if the created image is too large and does not fit in the router memory.
 
@@ -142,40 +146,37 @@ and this to be **de**-selected:
 
 - Network -> WirelessAPD -> wpad-basic-mbedtls
 
-[NOTE]
-=========================
+::: tip NOTE
 In order to have additional packages, the easiest way is to select them in menuconfig. More packages can be installed afterwards via +opkg+, but some of these require a specific kernel configuration to be in place. This can be achieved following link:development-kernel_vermagic.html[these additional instructions dealing with kernel vermagic]. Beware that this will increase noticeably the time and storage space required for the compilation.
-=========================
+:::
 
 Save and exit.
 
 At this stage there is the possibility to include custom files in the compiled firmware image. For this, you will have to create, inside the `openwrt/` directory, a `files/` directory containing the directory structure and files you want to add. For example, if you want to have a `/etc/config/lime-community` file you need to do the following:
 
------------------------------
+``` sh
 mkdir -p files/etc/config/
 touch files/etc/config/lime-community
------------------------------
+```
 
-and then edit the newly created `lime-community` file including your custom content. If a file from a package has the same name and path as a file in this directory, it will be overwritten. This is a quick way to include a custom configuration file, without the need to create an online link:development-network_profiles.html[network profile].
+and then edit the newly created `lime-community` file including your custom content. If a file from a package has the same name and path as a file in this directory, it will be overwritten. This is a quick way to include a custom configuration file, without the need to create an online [network profile](../guide/network-profiles).
 
 .Finally, compile the images
---------------------------------------------------------------------------------
+``` sh
 make -j$(nproc)
---------------------------------------------------------------------------------
+```
 
 If everything goes well you should find the produced binaries inside the +bin/+ directory.
 
 == Emulating on your computer with qemu
 
-Its possible to emulate a image compiled for x86_64 architecture. See link:https://github.com/libremesh/lime-packages/tree/master/tools[script] qemu_dev_start.sh and qemu_dev_stop.sh scripts.
+Its possible to emulate a image compiled for x86_64 architecture. See [script](https://github.com/libremesh/lime-packages/tree/master/tools) qemu_dev_start.sh and qemu_dev_stop.sh scripts.
 
-[NOTE]
-=========================
+::: tip NOTE
 You will be running something like:
-```
+``` sh
 sudo ./qemu_dev_start openwrt-x86-64-combined-ext4.img openwrt-x86-64-ramfs.bzImage
 ```
-More information link:https://github.com/libremesh/lime-packages/blob/master/TESTING.md[here]
+More information in [TESTING.md](https://github.com/libremesh/lime-packages/blob/master/TESTING.md)
 
-=========================
-
+:::
