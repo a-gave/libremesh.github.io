@@ -5,6 +5,7 @@ import { XMLHttpRequest } from 'xmlhttprequest'
 const lime_repo = './lime-packages/'
 const lime_pkgs_path = './lime-packages/packages/'
 const profile_repo = './network-profiles/'
+const feed_repo = "https://feed.libremesh.org/"
 let lime_feed = {}
 let profiles_feed = {}
 
@@ -18,15 +19,15 @@ openwrt.stable_branch = openwrt.stable_version?.substr(0,5)
 openwrt.oldstable_branch = openwrt.oldstable_version?.substr(0,5)
 
 lime_feed = {
-  main: await (await fetch('https://feed.libremesh.org/master/openwrt-main/x86_64/index.json')).json(),
-  stable: await (await fetch('https://feed.libremesh.org/master/openwrt-'+openwrt.stable_branch+'/x86_64/index.json')).json(),
-  oldstable: await (await fetch('https://feed.libremesh.org/master/openwrt-'+openwrt.oldstable_branch+'/x86_64/index.json')).json()
+  main: await (await fetch(feed_repo+'master/openwrt-main/x86_64/index.json')).json(),
+  stable: await (await fetch(feed_repo+'master/openwrt-'+openwrt.stable_branch+'/x86_64/index.json')).json(),
+  oldstable: await (await fetch(feed_repo+'master/openwrt-'+openwrt.oldstable_branch+'/x86_64/index.json')).json()
 }
 
 profiles_feed = {
-  main: await (await fetch('https://feed.libremesh.org/profiles/openwrt-main/x86_64/index.json')).json(),
-  stable: await (await fetch('https://feed.libremesh.org/profiles/openwrt-'+openwrt.stable_branch+'/x86_64/index.json')).json(),
-  oldstable: await (await fetch('https://feed.libremesh.org/profiles/openwrt-'+openwrt.oldstable_branch+'/x86_64/index.json')).json()
+  main: await (await fetch(feed_repo+'profiles/openwrt-main/x86_64/index.json')).json(),
+  stable: await (await fetch(feed_repo+'profiles/openwrt-'+openwrt.stable_branch+'/x86_64/index.json')).json(),
+  oldstable: await (await fetch(feed_repo+'profiles/openwrt-'+openwrt.oldstable_branch+'/x86_64/index.json')).json()
 }
 
 async function copyFiles(from_dir, to_dir, from_file, to_file) {
@@ -86,6 +87,15 @@ async function generateIndexMd(indexMd_dir, pkg, _descr, _readme, _makefile, _ex
   fs.writeFileSync(indexMd_dir+pkg+'/index.md', file)
 }
 
+function generateBuildInfo(feed, pa, path) {
+  ['main', 'stable', 'oldstable'].forEach(branch => {
+    Object.entries(feed[branch].packages).find(p => {
+      if (p[0] === pa) {
+        fs.writeFileSync('./docs/'+path+'/'+pa+'/.built_'+branch, p[1])
+      }
+    })
+  })
+}
 
 async function setupPackages() {
   console.log('Copying lime-packages')
@@ -99,16 +109,17 @@ async function setupPackages() {
     const from_dir = lime_pkgs_path+pa+'/'
     const to_dir = './docs/packages/'+pa+'/'
     
-    const makefile_path = to_dir+'/Makefile'
-    const makefileExist = fs.existsSync(makefile_path)
     let readme = ''
     let description = ''
     let makefile = ''
 
     await copyFiles(from_dir, to_dir, 'Makefile')
 
-    if (['lime-app', 'shared-state-async'].includes(pa)) {
+    const makefile_path = to_dir+'/Makefile'
+    const makefileExist = fs.existsSync(makefile_path)
 
+    if (['lime-app', 'shared-state-async'].includes(pa)) {
+      // skip packages with external url
     } else {
       await copyFiles(from_dir, to_dir, 'README.md')
       await copyFiles(from_dir, to_dir, 'README', 'README.md')
@@ -117,9 +128,8 @@ async function setupPackages() {
     }
 
     const readme_path = to_dir+'README.md'
-    const readmeExist = fs.existsSync(readme_path)
 
-    if (readmeExist) {
+    if (fs.existsSync(readme_path)) {
       readme = fs.readFileSync(readme_path, { encoding: 'utf-8', flag: 'r'}) || ''
       if (readme !== '') {
         readme = "---\n"+readme.replace(/^# .*/, '')
@@ -158,24 +168,9 @@ async function setupPackages() {
       generateIndexMd('./docs/packages/', pa, description, readme, makefile)
     }
 
-    Object.entries(lime_feed.main.packages).find(p => {
-      if (p[0] === pa) {
-        fs.writeFileSync('./docs/packages/'+pa+'/.built_main', p[1])
-      }
-    }) 
-    Object.entries(lime_feed.stable.packages).find(p => {
-      if (p[0] === pa) {
-        fs.writeFileSync('./docs/packages/'+pa+'/.built_stable', p[1])
-      }
-    }) 
-    Object.entries(lime_feed.oldstable.packages).find(p => {
-      if (p[0] === pa) {
-        fs.writeFileSync('./docs/packages/'+pa+'/.built_oldstable', p[1])
-      }
-    }) 
+    generateBuildInfo(lime_feed, pa, 'packages')
   })
 }
-
 
 function setupProfiles() {
   console.log('Copying network-profiles communities and packages')
@@ -200,13 +195,12 @@ function setupProfiles() {
 
     let readme = ''
     const readme_path = to_dir+'/README.md'
-    const readmeExist = fs.existsSync(readme_path)
 
-    if (readmeExist) {
+    if (fs.existsSync(readme_path)) {
       readme = fs.readFileSync(readme_path, { encoding: 'utf-8', flag: 'r'}) || ''
       if (readme !== '') {
         readme = readme.replace(/^# .*/, '')
-        generateIndexMd('./docs/profiles/communities/', c, '', readme, '')
+        generateIndexMd('./docs/profiles/communities/', c, '', readme)
       }
     }
 
@@ -272,23 +266,7 @@ function setupProfiles() {
         }
         generateIndexMd('./docs/profiles/packages/', profile_name, description, readme, makefile, extra)
       }
-
-      Object.entries(profiles_feed.main.packages).find(p => {
-        if (p[0] === profile_name) {
-          fs.writeFileSync(to_dir+'.built_main', p[1])
-        }
-      }) 
-      Object.entries(profiles_feed.stable.packages).find(p => {
-        if (p[0] === profile_name) {
-          fs.writeFileSync(to_dir+'.built_stable', p[1])
-        }
-      }) 
-      Object.entries(profiles_feed.oldstable.packages).find(p => {
-        if (p[0] === profile_name) {
-          fs.writeFileSync(to_dir+'.built_oldstable', p[1])
-        }
-      })
-
+      generateBuildInfo(profiles_feed, profile_name, 'profiles/packages')
     })
   })
   // console.log(profiles_list)
